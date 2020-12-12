@@ -1,6 +1,6 @@
 * [Home](https://github.com/fprime-community/fpp/wiki)
-* [User's Guide](https://github.com/pages/fprime-community/fpp/fpp-users-guide.html)
-* [Language Specification](https://github.com/pages/fprime-community/fpp/)
+* [User's Guide](https://fprime-community.github.io/fpp/fpp-users-guide.html)
+* [Language Specification](https://fprime-community.github.io/fpp/)
 * [Tools](https://github.com/fprime-community/fpp/wiki/Tools)
 * [Analysis](https://github.com/fprime-community/fpp/wiki/Analysis)
 * [Code Generation](https://github.com/fprime-community/fpp/wiki/Code-Generation)
