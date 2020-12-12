@@ -1,22 +1,22 @@
 This page describes the tools for analyzing and translating FPP models.
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/fpp-check[fpp-check]
+* https://github.com/fprime-community/fpp/wiki/fpp-check[fpp-check]
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/fpp-depend[fpp-depend]
+* https://github.com/fprime-community/fpp/wiki/fpp-depend[fpp-depend]
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/fpp-format[fpp-format]
+* https://github.com/fprime-community/fpp/wiki/fpp-format[fpp-format]
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/fpp-from-xml[fpp-from-xml]
+* https://github.com/fprime-community/fpp/wiki/fpp-from-xml[fpp-from-xml]
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/fpp-locate-defs[fpp-locate-defs]
+* https://github.com/fprime-community/fpp/wiki/fpp-locate-defs[fpp-locate-defs]
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/fpp-locate-uses[fpp-locate-uses]
+* https://github.com/fprime-community/fpp/wiki/fpp-locate-uses[fpp-locate-uses]
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/fpp-syntax[fpp-syntax]
+* https://github.com/fprime-community/fpp/wiki/fpp-syntax[fpp-syntax]
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/fpp-to-cpp[fpp-to-cpp]
+* https://github.com/fprime-community/fpp/wiki/fpp-to-cpp[fpp-to-cpp]
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/fpp-to-xml[fpp-to-xml]
+* https://github.com/fprime-community/fpp/wiki/fpp-to-xml[fpp-to-xml]
 
 == General Notes
 

@@ -9,7 +9,7 @@ The AST consists of nodes arranged in a tree with a parent-child
 relationship.
 
 * *Analysis Data Structure:* Defined 
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[here].
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[here].
 
 * *AST Node:* 
 An AST node represents an element of the source syntax.
@@ -112,6 +112,6 @@ that the use refers to).
 
 == Algorithms
 
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/Computing-Dependencies[Computing Dependencies]
-* https://github.jpl.nasa.gov/bocchino/fpp/wiki/Checking-Semantics[Checking Semantics]
+* https://github.com/fprime-community/fpp/wiki/Computing-Dependencies[Computing Dependencies]
+* https://github.com/fprime-community/fpp/wiki/Checking-Semantics[Checking Semantics]
 

@@ -9,16 +9,16 @@ As the algorithm computes types, it checks for typing errors.
 . A list _tul_ of translation units.
 
 . An 
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[analysis 
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis 
 data structure] _a_
 representing the results of analysis so far.
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Type-Uses[Check Type Uses]
+https://github.com/fprime-community/fpp/wiki/Check-Type-Uses[Check Type Uses]
 must have already been run.
 
 == Output
 
 . The analysis _a_ with an updated
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[type map],
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[type map],
 if the check passes; otherwise an error.
 
 == Procedure
@@ -42,7 +42,7 @@ definition appearing in _tu_.
 For each constant definition _d_:
 
 . If _d_ is not in the 
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[type map]
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[type map]
 of _a_, then
 
 .. Visit each expression appearing in _d_, threading
@@ -80,7 +80,7 @@ of an integer literal expression is _Integer_), then use that as _T_.
 .. Otherwise if _n_ represents a use, then 
 
 ... Look in the
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[use-def map]
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[use-def map]
 of _n_ to get the symbol _s_ corresponding
 to _n_.
 Throw an internal error if it is not there.
@@ -88,7 +88,7 @@ Throw an internal error if it is not there.
 ... Visit the definition corresponding to _s_.
 
 ... Look in the 
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[type map]
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[type map]
 of _a_ to get the type _T_ of _s_.
 Throw an internal error if it is not there.
 

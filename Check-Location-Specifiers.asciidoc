@@ -3,7 +3,7 @@ matches the actual location of the symbol.
 
 == Input
 
-. An https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[analysis data structure]
+. An https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis data structure]
 _a_.
 
 . A list _tul_ of FPP translation units.
@@ -17,10 +17,10 @@ or an error.
 
 . *Build the location specifier map:* Use the same algorithm
 as for
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Computing-Dependencies[computing dependencies].
+https://github.com/fprime-community/fpp/wiki/Computing-Dependencies[computing dependencies].
 
 . *Check specified locations:* Traverse each translation unit _tu_ in _tul_, updating the
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[scope name list]
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[scope name list]
 as modules are entered and exited.
 For each definition _d_ encountered other than a module definition, do the following:
 

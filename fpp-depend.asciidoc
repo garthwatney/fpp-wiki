@@ -26,7 +26,7 @@ For example, for the files described above,
 *Procedure:*
 
 . Create a fresh 
-link:https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[analysis 
+link:https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis 
 data structure] _a_.
 
 . Add the specified input files other than _stdin_, if any, to the input files in _a_.
@@ -37,7 +37,7 @@ When parsing, recursively resolve include specifiers and add the path of each
 included file to the included file set in _a_.
 
 . Let _a'_ be the result of 
-https://github.jpl.nasa.gov/bocchino/fpp/wiki/Computing-Dependencies[computing 
+https://github.com/fprime-community/fpp/wiki/Computing-Dependencies[computing 
 dependencies] with inputs _a_ and _tul_.
 
 . Write out the dependency files in _a'_.

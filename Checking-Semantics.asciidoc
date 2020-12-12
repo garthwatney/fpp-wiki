@@ -4,7 +4,7 @@
 
 == Output
 
-. If the semantic check passes, an https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[analysis data structure] _a_ representing the results of the analysis.
+. If the semantic check passes, an https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis data structure] _a_ representing the results of the analysis.
 
 . Otherwise an error and no output.
 
@@ -12,30 +12,30 @@
 
 . Create an empty analysis data structure _a_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Enter-Symbols[Enter symbols] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Enter-Symbols[Enter symbols] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Uses[Check uses] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Uses[Check uses] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Use-Def-Cycles[Check use def cycles] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Use-Def-Cycles[Check use def cycles] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Type-Uses[Check type uses] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Type-Uses[Check type uses] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Expression-Types[Check expression types] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Expression-Types[Check expression types] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Evaluate-Implied-Enum-Constants[Evaluate implied enum constants] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Evaluate-Implied-Enum-Constants[Evaluate implied enum constants] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Evaluate-Constant-Expressions[Evaluate constant expressions] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Evaluate-Constant-Expressions[Evaluate constant expressions] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Finalize-Type-Definitions[Finalize type definitions] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Finalize-Type-Definitions[Finalize type definitions] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Port-Definitions[Check port definitions] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Port-Definitions[Check port definitions] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Component-Definitions[Check component definitions] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Component-Definitions[Check component definitions] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Component-Instance-Definitions[Check component instance definitions] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Component-Instance-Definitions[Check component instance definitions] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Topology-Definitions[Check topology definitions] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Topology-Definitions[Check topology definitions] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Init-Specifiers[Check init specifiers] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Init-Specifiers[Check init specifiers] for _a_ and _tul_.
 
-. https://github.jpl.nasa.gov/bocchino/fpp/wiki/Check-Location-Specifiers[Check location specifiers] for _a_ and _tul_.
+. https://github.com/fprime-community/fpp/wiki/Check-Location-Specifiers[Check location specifiers] for _a_ and _tul_.
