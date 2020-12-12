@@ -1,0 +1,117 @@
+This page describes the algorithms and data structures for performing analysis 
+on FPP source models.
+
+== Data Structures
+
+* *Abstract Syntax Tree (AST):* The structure representing
+the abstract source syntax of an input model.
+The AST consists of nodes arranged in a tree with a parent-child
+relationship.
+
+* *Analysis Data Structure:* Defined 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[here].
+
+* *AST Node:* 
+An AST node represents an element of the source syntax.
+Each AST node has a unique integer identifier.
+
+* *Command:* An FPP command.
+
+* *Component:* An FPP component, consisting of the following:
+
+. A map from port names to port instances.
+
+. A map from special port kinds to special port instances.
+
+. A map from event identifiers to events.
+
+. A map from command opcodes to commands.
+
+. A map from parameter identifiers to parameters.
+
+. A map from telemetry channel identifiers to telemetry channels.
+
+* *Event:* An FPP event report.
+
+* *Expression:* A syntactic expression. Expressions with identical 
+form (e.g., two instances of the literal value `3`) appearing at distinct
+nodes in the AST count as distinct expressions.
+
+* *File:* One of (a) an absolute path on the system where the analysis occurs; 
+or (b) a special system file such as stdin or stdout.
+
+* *Internal port:* An internal port used in a component definition.
+
+* *Name:* A name, either qualified or unqualified.
+Names are not associated with nodes in the AST.
+For example, there is only one name `a.b.c`.
+
+* *Name-Symbol Map:* A local mapping of unqualified names to symbols. For any 
+name-symbol map _s_ and name _n_, if the mapping _s[n]_ already exists, then 
+it is an error to attempt to add a new mapping for _n_.
+
+* *Nested Scope:* A stack of scopes that represents the nesting of scopes 
+inside each other. Scopes are pushed on the stack (starting with the global 
+scope) when moving inwards in the nesting, and popped off the stack when 
+returning outwards. New mappings of names to symbols are added to the 
+innermost scope. Lookup of names _n_ starts with the innermost scope _S_, 
+moving to the next level up only if there is no entry for _n_ in _S_, and 
+finally giving up with an error if there is no entry for _n_ at the outermost 
+scope.
+
+* *Parameter:* An FPP ground parameter.
+
+* *Port Instance:* A instance of a port definition used in a component 
+definition.
+A port instance can be (1) a general instance of a port definition or (2)
+a special port instance or (3) an instance of an internal port.
+
+* *Qualified Identifier:* A qualified identifier appearing in the source 
+syntax.
+A qualified identifier is either an unqualified name (e.g., `a`) or a qualified 
+identifier followed by an unqualified name (e.g., `a.b`).
+A qualified identifier represents a qualified name.
+Qualified identifiers representing the same qualified name (e.g., the name 
+`a.b.c`) and appearing
+at distinct nodes in the AST count as distinct qualified
+identifiers.
+
+* *Scope:* A collection of name-symbol maps that represents a single flat scope 
+(the global scope or a brace-delimited scope). Within each scope, there is 
+one name-symbol map for each name group (values, types, etc.).
+
+* *Symbol:* A data structure that represents a definition. There is one kind of 
+symbol for each kind of definition. A module symbol for a module _M_ stores the 
+first AST
+node encountered that adds definitions to _M_.  A non-module symbol stores the 
+unique AST node where the definition occurs.
+
+* *Telemetry Channel:* An FPP telemetry channel.
+
+* *Topology:* An FPP topology.
+
+* *Type Name:* A syntactic type name. A type name is associated with a node 
+in the AST, so two different type names can refer to 
+the same type. For example, if the keyword `U32` appears at multiple nodes 
+in the AST, then there are multiple type names that all refer to the same 
+type `U32`.
+
+* *Type:* An FPP type. Types include internal types such as _Integer_. Types 
+are not associated with nodes in the AST. For example, there is only one 
+type `U32`. Multiple type names can refer to the same type. Array types have 
+resolved constants for their size expressions.
+
+* *Use-Def Matching:* A data structure that matches the use of a symbol
+with the symbol it uses.
+A use-def matching stores an AST node identifier (the use), a qualified name 
+(the qualified
+name appearing in the use), and a symbol (the definition
+that the use refers to).
+
+* *Value:* An FPP value.
+
+== Algorithms
+
+* https://github.jpl.nasa.gov/bocchino/fpp/wiki/Computing-Dependencies[Computing Dependencies]
+* https://github.jpl.nasa.gov/bocchino/fpp/wiki/Checking-Semantics[Checking Semantics]
+

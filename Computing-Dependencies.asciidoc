@@ -1,0 +1,90 @@
+This algorithm computes dependencies for a list of translation units.
+
+== Input
+
+. An https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[analysis data structure]
+_a_. The 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[input file set]
+of _a_ must record the set of files presented for analysis.
+
+. A list _tul_ of FPP translation units.
+
+==  Output
+
+. An analysis data structure _a_ with updated location specifier map, 
+dependency file set, and included file set.
+
+== Procedure
+
+. *Resolve include specifiers:* Recursively resolve include specifiers in _tu_.
+Add the path of each included file to the included file set in _a_.
+
+. *Build the location specifier map:* Traverse each translation unit _tu_ in _tul_, updating the
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[scope name list]
+as modules are entered and exited.
+For each location specifier _s_ encountered, do the following:
+
+.. Let _k_ be the symbol kind specified in _s_.
+For example, in the specifier `locate constant c at "c.fpp"`, the symbol kind is `constant`. 
+
+.. Compute the qualified name _q_ associated with _s_.
+For example, if the location specifier `locate constant c at "c.fpp"` appears
+inside module _M_, then _q_ is _M.c_.
+
+.. Check the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[location 
+specifier map]
+for a mapping from _(k, q)_ to some location specifier _s'_.
+
+.. If there is no such mapping, then add the mapping from _(k, q)_ to _s_.
+
+.. Otherwise
+
+... Compute the absolute path _p_ associated with _s_.
+For example, if the location specifier `locate constant c at "c.fpp"` appears
+in the file `/home/foo/bar/baz.fpp`, then _p_ is `/home/foo/bar/c.fpp`.
+
+... Compute the absolute path _p'_ associated with _s'_.
+
+... If _p_ does not equal _p'_, then throw an error.
+
+. *Map uses to locations:* Traverse each translation unit _tu_ in _tul_, updating the
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[scope name list]
+as modules are entered and exited.
+For each use of a symbol _u_ encountered, do the following:
+
+.. Resolve _u_ to a list _l_ of possible qualified names. For example, if 
+_u_ is `c.d` and it appears inside module `B` which appears inside module `A`, 
+then _l_ is `A.B.c.d`, `A.c.d`, `c.d`.
+Construct _l_ with the innermost name first. For example, `A.B.c.d` 
+appears before `A.c.d`.
+
+.. For each qualified name _q_ in _l_, in order starting with the head of 
+_l_, check the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[location 
+specifier map]
+of _a_ for a path _p_ corresponding to _q_.
+
+.. If _p_ exists and is not in the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[input file set]
+of _a_ and is not already in the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[dependency file set]
+of _a_, then
+
+... Add _p_ to the
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[dependency file set]
+of _a_.
+
+... If the file _f_ at _p_ exists, then
+
+.... Parse _f_, generating a translation unit _tu_.
+
+.... Run this algorithm on the list _[ tu ]_ with the value of _a_ computed so far.
+Let the result be the new _a_.
+
+... Otherwise add _p_ to the https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[missing dependency file set] of _a_.
+
+. *Eliminate included files as dependencies:* For each file _f_ in the included
+file set, if _f_ appears in the dependency file file set, then delete it
+from the set.
+The dependency is already recorded in the file that includes _f_.

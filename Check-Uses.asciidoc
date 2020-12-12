@@ -1,0 +1,162 @@
+This algorithm traverses a source model and checks that each use
+refers to definition.
+It also constructs the use-def map.
+
+== Input
+
+. A list _tul_ of translation units.
+
+. An 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[analysis 
+data structure] _a_
+representing the results of analysis so far.
+
+== Output
+
+. An analysis data structure _a_ with updated use-def map.
+
+== Procedure
+
+. *Translation unit lists:* Visit each translation unit _tu_ in _tul_ in order.
+
+. *Translation units:* Visit a translation unit _tu_ by visiting its members _tum_.
+
+. *Translation unit members:* Visit a translation unit member _tum_ as follows:
+
+.. *Module definitions:* Otherwise if _tum_ is a module definition _d_ with name _n_, then
+
+... Look up the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis#data-structures[module 
+symbol] _sym_ associated with the unqualified name _n_ as described in
+*Expressions* below.
+
+... Look up the mapping from _sym_ to _s_ in the
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+map] of _a_.
+If no such mapping exists, then throw an internal error.
+
+... Push _s_ onto the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[nested 
+scope] of _a_.
+
+... Visit each translation unit member of _d_.
+
+... Pop _s_ off the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[nested 
+scope] of _a_.
+
+.. *Enum definitions:* Otherwise if _tum_ is an enum definition _d_ with name _n_, then
+
+... Visit the type of _d_ if it is present.
+
+... Construct the unique 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis#data-structures[enum
+symbol] _sym_ corresponding to _d_.
+
+... Look up the mapping from _sym_ to _s_ in the
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+map] of _a_.
+If no such mapping exists, then throw an internal error.
+
+... Push _s_ onto the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[nested 
+scope] of _a_.
+
+... Visit each enumerated constant definition of _d_.
+
+... Pop _s_ off the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[nested 
+scope] of _a_.
+
+.. *Component definitions:* Otherwise if _tum_ is a component definition _d_ 
+with name _n_, then
+
+... Construct the unique 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis#data-structures[component
+symbol] _sym_ corresponding to _d_.
+
+... Look up the mapping from _sym_ to _s_ in the
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+map] of _a_.
+If no such mapping exists, then throw an internal error.
+
+... Push _s_ onto the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[nested 
+scope] of _a_.
+
+... Visit each member of _d_.
+
+... Pop _s_ off the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[nested 
+scope] of _a_.
+
+.. *Other definitions:* If _tum_ is an abstract type, array,
+constant, or port definition, then visit all the
+type names and expressions appearing in _tum_.
+
+.. *TODO:* Otherwise TODO.
+
+. *Enumerated constant definitions:* Visit an enumerated constant definition 
+_d_ as follows:
+
+.. If _d_ contains an expression _e_, then visit _e_.
+
+. *Component members:* Visit a component member _cm_ as follows:
+
+.. If _cm_ corresponds to a translation member _tum_, then visit _cm_
+in the same manner as _tum_.
+
+.. Otherwise visit all the expressions, types, and port uses appearing
+in _cm_.
+
+. *Expressions:* Visit an expression _e_ as follows:
+
+.. *Unqualified names:* If _e_ is an unqualified name _n_, then
+
+... Look up the mapping from _n_ to _sym_ in the innermost 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[nested 
+scope] of _a_ in the value name group.
+If no such mapping exists, then throw a semantic error.
+
+... Record the mapping from _e_ to _sym_ in the
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[use-def map]
+of _a_.
+
+.. *Dot expressions:* Otherwise if _e_ is a dot expression _e'.n_, then
+
+... Visit _e'_.
+
+... Look up the mapping from _e'_ to _sym'_ in the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[use-def map]
+of _a_.
+If no such mapping exists, then throw an internal error.
+
+... Look up the mapping from _sym'_ to _s_ in the 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+map] of _a_.
+If no such mapping exists, then throw a semantic error.
+
+... Look up the mapping from _n_ to _sym_ in _s_.
+If no such mapping exists, then throw a semantic error.
+
+... Record the mapping from _e_ to _sym_ in the
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[use-def map]
+of _a_.
+
+.. *Other expressions:* Otherwise visit each expression and type appearing in 
+_e_.
+
+. *Type names:* Visit a type name _tn_ as follows:
+
+.. *Unqualified names:* Use the same algorithm as for unqualified
+name expressions, but use the type name group instead of the
+value name group.
+
+.. *Qualified names:* Use the same algorithm as for dot expressions,
+but use the type name group instead of the value name group.
+
+.. *Other types*: Nothing to do.
+
+. *Port uses:* A port use _pu_ is a qualified or unqualified name.
+Visit _pu_ in the same way as a qualified or unqualified type name,
+but use the port name group instead of the type name group.

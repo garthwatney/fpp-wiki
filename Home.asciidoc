@@ -1,0 +1,26 @@
+Welcome to the wiki for F Prime Prime (FPP). FPP is a domain-specific modeling language for the
+https://github.jpl.nasa.gov/FPRIME/fprime-sw[F Prime flight software framework].
+
+== Our Motto
+
+image::diagrams/fpp.png[]
+
+This motto, derived from the Fundamental Theorem of Calculus, explains the name F Prime Prime, or FPP:
+
+* By "integrating" an _F''_ model (i.e., running the FPP tools), you
+get an _F'_ deployment that is partially implemented.
+* By "integrating" the generated _F'_ deployment (i.e., completing the implementation),
+you get a FSW application.
+
+== For Users and Implementers
+
+* https://github.jpl.nasa.gov/pages/bocchino/fpp/fpp-users-guide.html[User's Guide]
+* https://github.jpl.nasa.gov/bocchino/fpp/wiki/Tools[Tools]
+* https://github.jpl.nasa.gov/bocchino/fpp/wiki/Code-Generation[Code Generation]
+
+== Primarily for Implementers
+
+* https://github.jpl.nasa.gov/pages/bocchino/fpp/[Language Specification]
+* https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis[Analysis]
+* https://github.jpl.nasa.gov/bocchino/fpp/wiki/Pure-Functional-Programming-in-Scala[Pure Functional Programming in Scala]
+* https://github.jpl.nasa.gov/bocchino/fpp/wiki/Schedule[Schedule]

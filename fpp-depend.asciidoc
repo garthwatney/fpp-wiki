@@ -1,0 +1,47 @@
+This tool computes dependencies for FPP source files.
+
+*Flags:*
+
+. `-i`: Treat included files as dependencies.
+
+. `-m` _file_: Write a list of missing dependencies to _file_.
+
+*Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
+files specified on the command line.
+
+*Output:* 
+
+. A list of files (the dependencies), written one per line to standard 
+output, as absolute paths with no other punctuation.
+By default, included files are not listed as dependencies.
+For example, if a file `a.fpp` includes `b.fpp` and
+`b.fpp` depends on `c.fpp`, then `a.fpp` depends on `c.fpp`.
+
+. If option `-i` is present, then the dependency list contains included files.
+For example, for the files described above,
+`a.fpp` depends on `b.fpp` and `c.fpp`.
+
+. If option `-m` is present, then write missing dependencies to the specified file.
+
+*Procedure:*
+
+. Create a fresh 
+link:https://github.jpl.nasa.gov/bocchino/fpp/wiki/Analysis-Data-Structure[analysis 
+data structure] _a_.
+
+. Add the specified input files other than _stdin_, if any, to the input files in _a_.
+
+. Parse each of the files in _fl_, generating a list _tul_ of translation 
+units.
+When parsing, recursively resolve include specifiers and add the path of each
+included file to the included file set in _a_.
+
+. Let _a'_ be the result of 
+https://github.jpl.nasa.gov/bocchino/fpp/wiki/Computing-Dependencies[computing 
+dependencies] with inputs _a_ and _tul_.
+
+. Write out the dependency files in _a'_.
+
+. If option `-i` is present, then write the included file set of _a'_ to standard output.
+
+. If option `-m` is present, then write the missing dependency file set of _a'_ to the specified file.

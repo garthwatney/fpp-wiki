@@ -1,0 +1,12 @@
+This tool performs semantic checking of FPP models.
+
+*Input:*  A list _fl_ of files: either the single file _stdin_ or a list of files specified on the command line.
+
+*Output:* If the parsing succeeds, then no output; otherwise an error message.
+
+*Procedure*:
+
+. Parse each of the files in _fl_, generating a list _tul_ of translation units.
+When parsing, recursively resolve include specifiers.
+
+. Perform https://github.jpl.nasa.gov/bocchino/fpp/wiki/Checking-Semantics[semantic checking] on _tul_.

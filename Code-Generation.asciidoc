@@ -1,0 +1,25 @@
+Below we set forth the plan for the first version of code generation.
+In this version, we generate XML where possible so we can use the existing F Prime back end.
+In a later version we will directly generate of C++ and any other needed code (e.g., XML for the ground data system).
+
+== XML
+
+*Types:*
+
+. Convert each struct definition to a `SerializableAi.xml` file.
+
+. Convert each enum definition to an `EnumAi.xml` file.
+
+. Convert each array definition to an `ArrayAi.xml` file.
+
+*Ports:* Convert each port definition to a `PortAi.xml` file.
+
+*Components:* Convert each component definition to a `ComponentAi.xml` file.
+
+*Topologies:* Convert each topology definition to a `TopologyAi.xml` file.
+
+== C++
+
+*Constants:* Generate a header file with constant definitions.
+
+*Topologies:* Generate C++ code for setting up a deployment.
