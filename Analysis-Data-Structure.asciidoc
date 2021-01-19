@@ -31,6 +31,12 @@ https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[nested
 scope] object
 that represents the current position in a scope traversal.
 
+* *Parent symbol map:* A map from
+https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbols] 
+to their parent symbols.
+For example, the symbol for a constant definition appearing inside a module
+_M_ is mapped to the symbol form _M_.
+
 * *Qualified name map:* A map from 
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbols] 
 to their
