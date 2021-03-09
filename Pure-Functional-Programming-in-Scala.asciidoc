@@ -29,7 +29,7 @@ We do use some impure code:
 
 * We use file read and write operations.
 
-* We represent internal errors (similar to FSW assertion failures)
+* We represent internal errors (similar to assertion failures in F Prime)
 as exceptions; the result of such an error is always to immediately abort.
 
 * There is some impurity required by the Scala parser combinator library.
