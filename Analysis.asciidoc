@@ -31,7 +31,9 @@ Each AST node has a unique integer identifier.
 
 . A map from telemetry channel identifiers to telemetry channels.
 
-* *Event:* An FPP event report.
+* *Component Instance:* An FPP component instance.
+
+* *Event:* An FPP event report specifier.
 
 * *Expression:* A syntactic expression. Expressions with identical 
 form (e.g., two instances of the literal value `3`) appearing at distinct

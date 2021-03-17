@@ -1,1 +1,44 @@
-TODO
+This algorithm traverses the source model and checks component instance
+definitions.
+
+== Input
+
+. A list _tul_ of translation units.
+
+. An 
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis 
+data structure] _a_
+representing the results of analysis so far.
+
+== Output
+
+. The analysis _a_ if the check passes; otherwise an error.
+
+== Procedure
+
+. Visit each translation unit in _tul_ with input _a_,
+yielding either _a_ or an error.
+
+=== AST Visitor Methods
+
+Each method accepts an analysis data structure _a_ as input
+and yields either _a_ or an error as output.
+
+==== Translation Units
+
+For each translation unit _tu_, visit each
+definition appearing in _tu_.
+
+==== Component Instance Definitions
+
+. For each component instance definition _d_
+
+.. Construct a component instance _i_ from _d_.
+
+.. Check that _i_ conforms to the rules for
+component instances.
+
+. Check that there are no overlapping identifier
+ranges for any pairs of instances.
+
+. Return _a_ as the result.
