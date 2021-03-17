@@ -19,6 +19,10 @@ representing the results of analysis so far.
 . Visit each translation unit in _tul_ with input _a_,
 yielding either _a_ or an error.
 
+. Check that there are no overlapping identifier
+ranges for any pairs of instances in the
+component instance map.
+
 === AST Visitor Methods
 
 Each method accepts an analysis data structure _a_ as input
@@ -26,19 +30,18 @@ and yields either _a_ or an error as output.
 
 ==== Translation Units
 
-For each translation unit _tu_, visit each
-definition appearing in _tu_.
+For each translation unit _tu_,
+visit each definition appearing in _tu_.
 
 ==== Component Instance Definitions
 
-. For each component instance definition _d_
+For each component instance definition _d_
 
-.. Construct a component instance _i_ from _d_.
+. Construct a component instance _i_ from _d_.
 
-.. Check that _i_ conforms to the rules for
+. Check that _i_ conforms to the rules for
 component instances.
 
-. Check that there are no overlapping identifier
-ranges for any pairs of instances.
+. Map _i_ to _d_ in the component instance map of _a_.
 
-. Return _a_ as the result.
+.  Return _a_ as the result.
