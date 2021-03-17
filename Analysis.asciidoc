@@ -33,6 +33,14 @@ Each AST node has a unique integer identifier.
 
 * *Component Instance:* An FPP component instance.
 
+* *Connection:* An FPP connection consisting
+of an output port, an optional output port number,
+an input port, and an optional input port number.
+
+* *Connection graph pattern:* An FPP connection
+graph pattern consisting of a pattern kind, a
+source instance, and a list of target instances.
+
 * *Event:* An FPP event report specifier.
 
 * *Expression:* A syntactic expression. Expressions with identical 
@@ -90,7 +98,21 @@ unique AST node where the definition occurs.
 
 * *Telemetry Channel:* An FPP telemetry channel.
 
-* *Topology:* An FPP topology.
+* *Topology:* An FPP topology, consisting of the following:
+
+. A set of topology symbols representing the imported topology
+definitions.
+
+. A set of component instances.
+Each instance may be either public or private for
+this topology.
+
+. A set of connection graph patterns.
+
+. The connection graph map: A mapping from connection graph names to sets
+of connections.
+
+. A set of unused ports.
 
 * *Type Name:* A syntactic type name. A type name is associated with a node 
 in the AST, so two different type names can refer to 
