@@ -12,7 +12,8 @@ representing the results of analysis so far.
 
 == Output
 
-. The analysis _a_ if the check passes; otherwise an error.
+An updated analysis _a'_ with the component instance map filled in if the check
+passes; otherwise an error.
 
 == Procedure
 
@@ -21,7 +22,7 @@ yielding either _a_ or an error.
 
 . Check that there are no overlapping identifier
 ranges for any pairs of instances in the
-component instance map.
+component instance map for _a_.
 
 === AST Visitor Methods
 

@@ -58,6 +58,11 @@ https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbols]
 to their 
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[scopes].
 
+* *Topology map:* A map from
+https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[topology symbols]
+to the corresponding
+https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[topologies].
+
 * *Type map:* A map from
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[type and 
 constant symbols],

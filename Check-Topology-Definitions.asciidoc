@@ -1,1 +1,85 @@
-TODO
+This algorithm traverses the source model and checks topology definitions.
+
+== Input
+
+. A list _tul_ of translation units.
+
+. An 
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis 
+data structure] _a_
+representing the results of analysis so far.
+
+== Output
+
+An updated analysis _a'_ with the topology map filled in if the check 
+passes; otherwise an error.
+
+== Procedure
+
+Visit each translation unit in _tul_ with input _a_,
+yielding either _a'_ or an error.
+
+=== AST Visitor Methods
+
+Each method accepts an analysis data structure _a_ as input
+and yields either an updated analysis data structure _a'_ or an error as 
+output.
+
+==== Translation Units
+
+For each translation unit _tu_, visit each
+definition appearing in _tu_.
+
+==== Component Definitions
+
+For each topology definition _d_
+
+. Visit each member _m_ of _d_ with input _a_, building
+up a topology data structure _t_.
+
+. Resolve _t_ to a partially numbered topology consisting
+of a flat list of instances and a flat list of
+connections.
+The connection end points have port numbers if and only
+if those numbers are present in the model source.
+
+.. Determine the set of all instances in _t_,
+consisting of (a) all instances specified in _t_
+and (b) public instances specified in topologies
+imported into _t_.
+
+.. Resolve pattern specifiers in _t_ to
+direct specifiers.
+
+.. Determine the set of all connections in _t_,
+with multiplicity (two or more connections between
+the same pairs of unnumbered ports are allowed).
+
+... Include all connections directly specified
+in _t_, after resolving patterns.
+Check that all connections are between instances
+present in _t_.
+If not, throw an error.
+
+... Include all connections from imported topologies
+that go between instances present in _t_.
+
+... Check that no pair of connections connects
+to the same port at the same port number.
+
+. Apply automatic numbering to _t_.
+This step fills in missing port numbers, preserving
+any numbers specified in the model source.
+
+.. General numbering
+
+.. Matched numbering
+
+. Check for unused ports in _t_ that are not
+in the unused port list.
+
+. Construct the unique topology symbol _s_ for _d_.
+
+. Map _s_ to _t_ in the component map of _a_.
+
+. Return _a_ as the result.
