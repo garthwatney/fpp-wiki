@@ -90,10 +90,19 @@ scope] of _a_.
 https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
-.. *Topology definitions:* TODO
+.. *Component instance definitions:*
+If _tum_ is a component instance definition, then
+visit all the type names, expressions, and component
+uses appearing in _tum_.
 
-.. *Other definitions:* If _tum_ is an abstract type, array,
-constant, port, or component instance definition, then visit all the
+.. *Topology definitions:*
+If _tum_ is a topology definition, then
+visit all the type names, expressions, and component instance
+uses appearing in _tum_.
+
+.. *Other definitions:* 
+If _tum_ is an abstract type, array,
+constant, or port definition, then visit all the
 type names and expressions appearing in _tum_.
 
 . *Enumerated constant definitions:* Visit an enumerated constant definition 
