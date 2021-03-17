@@ -100,10 +100,10 @@ unique AST node where the definition occurs.
 
 * *Topology:* An FPP topology, consisting of the following:
 
-. A set of topology symbols representing the imported topology
+. A set of topologies representing the imported topology
 definitions.
 
-. A set of component instance symbols.
+. A set of component instances.
 Each instance may be either public or private for
 this topology.
 
