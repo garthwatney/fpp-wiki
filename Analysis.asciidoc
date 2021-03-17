@@ -34,8 +34,8 @@ Each AST node has a unique integer identifier.
 * *Component Instance:* An FPP component instance.
 
 * *Connection:* An FPP connection consisting
-of an output port, an optional output port number,
-an input port, and an optional input port number.
+of an output port instance, an optional output port number,
+an input port instance, and an optional input port number.
 
 * *Connection graph pattern:* An FPP connection
 graph pattern consisting of a pattern kind, a
@@ -112,7 +112,7 @@ this topology.
 . The connection graph map: A mapping from connection graph names to sets
 of connections.
 
-. A set of unused ports.
+. A set of unused port instances.
 
 * *Type Name:* A syntactic type name. A type name is associated with a node 
 in the AST, so two different type names can refer to 
