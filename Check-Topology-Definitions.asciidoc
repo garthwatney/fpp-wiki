@@ -32,16 +32,23 @@ definition appearing in _tu_.
 
 ==== Component Definitions
 
-For each topology definition _d_
+For each topology definition _d_ that has not yet
+been resolved:
 
 . Visit each member _m_ of _d_ with input _a_, building
 up a topology data structure _t_.
+Check each member for semantic validity as much as possible.
+For example, ensure that the types of the port connections
+match.
 
 . Resolve _t_ to a partially numbered topology consisting
-of a flat list of instances and a flat list of
-connections.
+of (a) a list of instances and (b) a mapping between
+connection graph names and lists of connections.
 The connection end points have port numbers if and only
 if those numbers are present in the model source.
+
+.. Visit all topologies imported into _t_, ensuring
+that they are resolved.
 
 .. Determine the set of all instances in _t_,
 consisting of (a) all instances specified in _t_
@@ -51,7 +58,8 @@ imported into _t_.
 .. Resolve pattern specifiers in _t_ to
 direct specifiers.
 
-.. Determine the set of all connections in _t_,
+.. For each connection graph name _g_ appearing in _t_
+or in an imported topology, determine the set of all connections in _g_,
 with multiplicity (two or more connections between
 the same pairs of unnumbered ports are allowed).
 
@@ -65,7 +73,7 @@ If not, throw an error.
 that go between instances present in _t_.
 
 ... Check that no pair of connections connects
-to the same port at the same port number.
+to the same output port at the same port number.
 
 . Apply automatic numbering to _t_.
 This step fills in missing port numbers, preserving
