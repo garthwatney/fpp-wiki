@@ -103,7 +103,7 @@ unique AST node where the definition occurs.
 . A set of topology symbols representing the imported topology
 definitions.
 
-. A set of component instances.
+. A set of component instance symbols.
 Each instance may be either public or private for
 this topology.
 
