@@ -198,7 +198,20 @@ scope] of _a_ in the component instance name group.
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[qualified 
 name map] of _a_.
 
-.. *Topology definitions:* TODO.
+.. *Topology definitions:*
+If _tum_ is a topology definition with name _n_, then
+
+... Construct the unique
+https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbol] 
+_s_ of the correct kind for _d_.
+
+... Add the mapping from _n_ to _s_ in the innermost 
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+scope] of _a_ in the topology name group.
+
+... Add the qualified name of _d_ to the
+https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[qualified 
+name map] of _a_.
 
 . *Enumerated constant definitions:* Visit an enumerated constant definition 
 _d_ with name _n_ as follows:
