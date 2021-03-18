@@ -41,14 +41,14 @@ Check each member for semantic validity as much as possible.
 For example, ensure that the types of the port connections
 match.
 
+. Visit all topologies imported into _t_, ensuring
+that they are resolved.
+
 . Resolve _t_ to a partially numbered topology consisting
 of (a) a list of instances and (b) a mapping between
 connection graph names and lists of connections.
 The connection end points have port numbers if and only
 if those numbers are present in the model source.
-
-.. Visit all topologies imported into _t_, ensuring
-that they are resolved.
 
 .. Determine the set of all instances in _t_,
 consisting of (a) all instances specified in _t_
