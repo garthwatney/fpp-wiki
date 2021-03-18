@@ -84,8 +84,7 @@ the same number.
 
 .. Matched numbering
 
-. Check for unused ports in _t_ that are not
-in the unused port list.
+. Compute the ports that are actually unused.
 
 . Construct the unique topology symbol _s_ for _d_.
 

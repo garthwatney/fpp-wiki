@@ -112,7 +112,9 @@ this topology.
 . The connection graph map: A mapping from connection graph names to sets
 of connections.
 
-. A set of unused port instances.
+. The set of port instances declared as unused.
+
+. The set of port instances that are actually unused.
 
 * *Type Name:* A syntactic type name. A type name is associated with a node 
 in the AST, so two different type names can refer to 
