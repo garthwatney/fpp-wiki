@@ -37,9 +37,11 @@ been resolved:
 
 . Visit each member _m_ of _d_ with input _a_, building
 up a topology data structure _t_.
-Check each member for semantic validity as much as possible.
+Check each member for semantic validity.
 For example, ensure that the types of the port connections
 match.
+Don't check pattern validity yet, except to resolve
+uses.
 
 . Visit all topologies imported into _t_, ensuring
 that they are resolved.
