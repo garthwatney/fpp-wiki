@@ -103,9 +103,6 @@ unique AST node where the definition occurs.
 . A set of topologies representing the imported topology
 definitions.
 
-. A set of topologies representing the transitively
-imported topology definitions.
-
 . A set of component instances.
 Each instance may be either public or private for
 this topology.
