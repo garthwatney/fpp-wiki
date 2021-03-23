@@ -62,11 +62,7 @@ or in an imported topology, determine the set of all connections in _g_,
 with multiplicity (two or more connections between
 the same pairs of unnumbered ports are allowed).
 
-... Include all connections directly specified
-in _t_.
-Check that all connections are between instances
-present in _t_.
-If not, throw an error.
+... Include all connections directly specified in _t_.
 
 ... Include all connections from imported topologies
 that go between instances present in _t_.
@@ -79,10 +75,9 @@ This step fills in missing port numbers, preserving
 any numbers specified in the model source.
 
 .. General numbering.
-This step includes checks that (i) the numbers
-are in bounds for the ports and (ii) no two
-connections at the same output port have
-the same number.
+This step includes checks that (i) the numbers are in bounds for the ports and 
+(ii) no two connections at the same output port have the same number.
+If not, throw an error.
 
 .. Matched numbering
 
