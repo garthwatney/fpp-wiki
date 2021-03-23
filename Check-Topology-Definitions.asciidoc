@@ -63,6 +63,9 @@ with multiplicity (two or more connections between
 the same pairs of unnumbered ports are allowed).
 
 ... Include all connections directly specified in _t_.
+Check that all connections are between instances
+present in _t_.
+If not, throw an error.
 
 ... Include all connections from imported topologies
 that go between instances present in _t_.
