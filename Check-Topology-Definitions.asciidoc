@@ -90,6 +90,6 @@ the same number.
 
 . Construct the unique topology symbol _s_ for _d_.
 
-. Map _s_ to _t_ in the component map of _a_.
+. Map _s_ to _t_ in the topology map of _a_.
 
 . Return _a_ as the result.
