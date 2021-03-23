@@ -112,6 +112,10 @@ this topology.
 . The connection graph map: A mapping from connection graph names to sets
 of connections.
 
+. A map from ports to their output connections.
+
+. A map from ports to their input connections.
+
 . The set of port instances declared as unused.
 
 . The set of port instances that are actually unused.
