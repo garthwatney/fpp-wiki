@@ -42,12 +42,6 @@ to their parent symbols.
 For example, the symbol for a constant definition appearing inside a module
 _M_ is mapped to the symbol form _M_.
 
-* *Qualified name map:* A map from 
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbols] 
-to their
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[qualified 
-names].
-
 * *Scope name list:* A list of unqualified names representing the enclosing 
 scopes, with the innermost name at the head of the list. For example, inside 
 module `B` where `B` is inside `A` and `A` is at the top level, the scope name 
