@@ -55,6 +55,11 @@ connection graph names and lists of connections.
 The connection end points have port numbers if and only
 if those numbers are present in the model source.
 
+.. Exclude duplicated imports.
+For example, if topology _A_ imports topology _B_
+and _B_ imports _C_,
+then _A_ should not import _C_.
+
 .. Determine the set of all instances in _t_,
 consisting of (a) all instances specified in _t_
 and (b) public instances specified in topologies
