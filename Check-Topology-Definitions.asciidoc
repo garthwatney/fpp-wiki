@@ -76,7 +76,7 @@ that go between instances present in _t_.
 .. Resolve pattern specifiers in _t_ to
 and add the resulting connections to _t_.
 
-. Check that number of connections at each output port
+. Check that the number of connections at each output port
 is in bounds for the port size.
 
 . Apply automatic numbering to _t_.
