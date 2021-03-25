@@ -76,34 +76,23 @@ that go between instances present in _t_.
 .. Resolve pattern specifiers in _t_ to
 and add the resulting connections to _t_.
 
-. Check that the number of connections at each output port
+. Check output port numbers.
+
+.. Check that the number of connections at each output port
 is in bounds for the port size.
+
+.. Check that there are no duplicate numbers
+at any output ports.
 
 . Apply automatic numbering to _t_.
 This step fills in missing port numbers, preserving
 any numbers specified in the model source.
 
 .. Apply matched numbering.
-For each instance _I_, for each matching _M = (p1, p2)_
-specified in _I_:
-
-... For each connection _C1_ to _p1_, compute the
-corresponding connection _C2_ to _p2_.
-If there is no such connection, then throw an error.
-
-... For each pair _(C1, C2)_, if the connections
-specify port numbers for both _p1_ and _p2_, then check
-that the numbers match. If not, throw an error.
-Otherwise if the connections specify a port number
-for either of _p1_ or _p2_, then assign the other
-number to match.
-
-... For each pair _(C1, C2)_ that does not have
-a port number assigned, find the lowest
-available port number at _p1_ and assign it
-for _C1_ at _p1_ and _C2_ at _p2_.
+Use the algorithm described in the language spec.
 
 .. Apply general numbering.
+Use the algorithm described in the language spec.
 
 ... For each port instance _P_ involved in an
 output connection _C_, if _C_ has no assigned
