@@ -94,17 +94,6 @@ Use the algorithm described in the language spec.
 .. Apply general numbering.
 Use the algorithm described in the language spec.
 
-... For each port instance _P_ involved in an
-output connection _C_, if _C_ has no assigned
-from port number, then find the lowest
-port number available at _P_ and assign it
-as the from port number.
-
-... For each port instance _P_ involved in an
-input connection _C_, if _C_ has no assigned
-to port number, then assign zero as the
-from port number.
-
 . Compute the ports that are actually unused.
 
 . Construct the unique topology symbol _s_ for _d_.
