@@ -116,6 +116,10 @@ of connections.
 
 . A map from ports to their input connections.
 
+. A map from connections to their from port numbers.
+
+. A map from connections to their to port numbers.
+
 . The set of port instances declared as unused.
 
 . The set of port instances that are actually unused.
