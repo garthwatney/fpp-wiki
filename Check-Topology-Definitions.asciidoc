@@ -65,6 +65,9 @@ consisting of (a) all instances specified in _t_
 and (b) public instances specified in topologies
 imported into _t_.
 
+.. Check that all directly specified connections are
+between valid instances.
+
 .. For each connection graph name _g_ appearing in _t_
 or in an imported topology, determine the set of all connections in _g_,
 with multiplicity (two or more connections between
