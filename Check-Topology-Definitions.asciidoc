@@ -68,16 +68,12 @@ imported into _t_.
 .. Check that all directly specified connections are
 between valid instances.
 
-.. For each connection graph name _g_ appearing in _t_
-or in an imported topology, determine the set of all connections in _g_,
-with multiplicity (two or more connections between
-the same pairs of unnumbered ports are allowed).
+.. Resolve imported connections.
 Include connections from transitively imported topologies
 _t'_ that (a) go between instances present in _t_ and
 (b) were specified directly or by pattern (and not by import) in _t'_.
 
-.. Resolve pattern specifiers in _t_ to
-and add the resulting connections to _t_.
+.. Resolve pattern specifiers and add the resulting connections to _t_.
 
 . Check output port numbers.
 
