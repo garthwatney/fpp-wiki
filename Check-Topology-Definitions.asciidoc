@@ -46,7 +46,7 @@ If not, throw an error.
 Don't check pattern validity yet, except to resolve
 uses.
 
-. Visit all topologies imported into _t_, ensuring
+. Visit all topologies directly imported into _t_, ensuring
 that they are resolved.
 
 . Resolve _t_ to a partially numbered topology consisting
@@ -54,6 +54,11 @@ of (a) a list of instances and (b) a mapping between
 connection graph names and lists of connections.
 The connection end points have port numbers if and only
 if those numbers are present in the model source.
+
+.. For each topology _t'_ that is directly imported into _t_, let
+_s'_ be the set of transitively imported topologies of _t'_.
+Add _t'_ and _s'_ to the set of transitively imported topologies
+of _t_.
 
 .. Determine the set of all instances in _t_,
 consisting of (a) all instances specified in _t_
@@ -70,8 +75,9 @@ Check that all connections are between instances
 present in _t_.
 If not, throw an error.
 
-... Include all connections from imported topologies
-that go between instances present in _t_.
+... Include connections from transitively imported topologies
+_t'_ that (a) go between instances present in _t_ and
+(b) were specified directly or by pattern (and not by import) in _t'_.
 
 .. Resolve pattern specifiers in _t_ to
 and add the resulting connections to _t_.

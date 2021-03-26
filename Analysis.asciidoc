@@ -100,7 +100,10 @@ unique AST node where the definition occurs.
 
 * *Topology:* An FPP topology, consisting of the following:
 
-. A set of topology symbols representing the imported topology
+. A set of topology symbols representing the directly imported topology
+definitions.
+
+. A set of topology symbols representing the transitively imported topology
 definitions.
 
 . A set of component instances.
@@ -111,6 +114,8 @@ this topology.
 
 . The connection graph map: A mapping from connection graph names to sets
 of connections.
+
+. The set of connections defined in this topology and not imported.
 
 . A map from ports to their output connections.
 
