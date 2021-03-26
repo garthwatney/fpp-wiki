@@ -112,10 +112,11 @@ this topology.
 
 . A set of connection graph patterns.
 
-. The connection graph map: A mapping from connection graph names to sets
+. A map from connection graph names to sets
 of connections.
 
-. The set of connections defined in this topology and not imported.
+. A map from connection graph names to sets
+of locally defined (i.e., not imported) connections.
 
 . A map from ports to their output connections.
 
