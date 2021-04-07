@@ -93,7 +93,7 @@ Use the algorithm described in the language spec.
 .. Apply general numbering.
 Use the algorithm described in the language spec.
 
-. Compute the set of unused ports.
+. Compute the set of unconnected ports.
 
 . Construct the unique topology symbol _s_ for _d_.
 

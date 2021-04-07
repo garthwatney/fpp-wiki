@@ -4,14 +4,15 @@ This tool performs semantic checking of FPP models.
 
 . `-u` _file_: Write unconnected ports to _file_.
 
-*Input:*  A list _fl_ of files: either the single file _stdin_ or a list of files specified on the command line.
+*Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
+files specified on the command line.
 
 *Output:* 
 
 . If the parsing succeeds, then no standard output; otherwise an error message.
 
-. If the option `-u` is present, then write the unconnected port arrays
-to the specified file.
+. If the option `-u` is present, then write the names of all
+unconnected port arrays to the specified file.
 A port array is unconnected if it appears in a component instance used in
 a topology, and there is no connection at any of its port numbers.
 

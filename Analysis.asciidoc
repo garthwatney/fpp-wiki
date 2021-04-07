@@ -126,7 +126,7 @@ of locally defined (i.e., not imported) connections.
 
 . A map from connections to their to port numbers.
 
-. The set of unused port instances.
+. The set of unconnected port instances.
 
 * *Type Name:* A syntactic type name. A type name is associated with a node 
 in the AST, so two different type names can refer to 
