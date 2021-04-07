@@ -37,3 +37,5 @@ For each init specifier _s_:
 . Check that the types of the expressions in _s_ are correct.
 
 . Update the init specifier map.
+If the current component instance and phase already have an
+entry in the map, then throw an error.
