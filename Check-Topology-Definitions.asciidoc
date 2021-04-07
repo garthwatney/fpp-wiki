@@ -30,7 +30,7 @@ output.
 For each translation unit _tu_, visit each
 definition appearing in _tu_.
 
-==== Component Definitions
+==== Topology Definitions
 
 For each topology definition _d_ that has not yet
 been resolved:

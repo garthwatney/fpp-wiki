@@ -15,7 +15,7 @@ https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[here].
 An AST node represents an element of the source syntax.
 Each AST node has a unique integer identifier.
 
-* *Command:* An FPP command.
+* *Command:* An FPP command specifier.
 
 * *Component:* An FPP component, consisting of the following:
 
@@ -50,6 +50,8 @@ nodes in the AST count as distinct expressions.
 * *File:* One of (a) an absolute path on the system where the analysis occurs; 
 or (b) a special system file such as stdin or stdout.
 
+* *Init specifier:* An FPP init specifier.
+
 * *Internal port:* An internal port used in a component definition.
 
 * *Name:* A name, either qualified or unqualified.
@@ -69,7 +71,9 @@ moving to the next level up only if there is no entry for _n_ in _S_, and
 finally giving up with an error if there is no entry for _n_ at the outermost 
 scope.
 
-* *Parameter:* An FPP ground parameter.
+* *Parameter:* An FPP ground parameter specifier.
+
+* *Port:* An FPP port definition.
 
 * *Port Instance:* A instance of a port definition used in a component 
 definition.
@@ -96,7 +100,7 @@ first AST
 node encountered that adds definitions to _M_.  A non-module symbol stores the 
 unique AST node where the definition occurs.
 
-* *Telemetry Channel:* An FPP telemetry channel.
+* *Telemetry Channel:* An FPP telemetry channel specifier.
 
 * *Topology:* An FPP topology, consisting of the following:
 

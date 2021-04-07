@@ -19,6 +19,11 @@ on which the analysis depends.
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[files] 
 included when parsing input.
 
+* *Init specifier map:* A map from component instance symbols
+to sets of init specifiers.
+Each entry in the map represents all the init specifiers for
+the component instance.
+
 * *Input file set:* The set of 
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[files] 
 presented to the analyzer.
