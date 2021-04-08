@@ -4,7 +4,20 @@ out the AST as formatted source code.
 The main purpose of this tool is to test the FPP code generation capability.
 It is not a true formatter, in that (1) it requires syntactically valid
 FPP source as input and (2) it erases comments.
-However, it may still be useful for some formatting tasks.
+However, it may be useful for some formatting tasks.
+
+To preserve comments on their own lines
+that precede annotatable elements, you can run this
+script:
+
+[source,bash]
+----
+#!/bin/sh
+sed 's/^\( *\)#/\1@ #/' | fpp-format $@ | sed 's/^\( *\)@ #/\1#/'
+----
+
+It converts comments to annotations, runs `fpp-format`, and converts
+the annotations back to comments.
 
 *Flags:*
 
