@@ -2,9 +2,9 @@ This tool computes dependencies for FPP source files.
 
 *Flags:*
 
-. `-i`: Treat included files as dependencies.
+. `-i` _file_: Write included dependencies to _file_.
 
-. `-m` _file_: Write a list of missing dependencies to _file_.
+. `-m` _file_: Write missing dependencies to _file_.
 
 *Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
 files specified on the command line.
@@ -13,13 +13,13 @@ files specified on the command line.
 
 . A list of files (the dependencies), written one per line to standard 
 output, as absolute paths with no other punctuation.
-By default, included files are not listed as dependencies.
+Included files in the dependency graph are not listed as dependencies.
 For example, if a file `a.fpp` includes `b.fpp` and
-`b.fpp` depends on `c.fpp`, then `a.fpp` depends on `c.fpp`.
+`b.fpp` depends on `c.fpp`, then `a.fpp` depends on `c.fpp`
+but not `b.fpp`.
 
-. If option `-i` is present, then the dependency list contains included files.
-For example, for the files described above,
-`a.fpp` depends on `b.fpp` and `c.fpp`.
+. If option `-i` is present, then write included files in the dependency graph
+to the specified file.
 
 . If option `-m` is present, then write missing dependencies to the specified file.
 
@@ -42,6 +42,6 @@ dependencies] with inputs _a_ and _tul_.
 
 . Write out the dependency files in _a'_.
 
-. If option `-i` is present, then write the included file set of _a'_ to standard output.
+. If option `-i` is present, then write the included file set of _a'_ to the specified file.
 
 . If option `-m` is present, then write the missing dependency file set of _a'_ to the specified file.
