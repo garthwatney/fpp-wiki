@@ -1,6 +1,11 @@
 Welcome to the wiki for F Prime Prime (FPP). FPP is a domain-specific modeling language for the
 https://github.com/nasa/fprime-sw[F Prime flight software framework].
 
+To use FPP, you write a model and use the tools to generate XML and C++.
+Compared to writing XML by hand, FPP provides a cleaner and more succinct syntax,
+a well-defined semantics, good error checking and reporting, and better integration
+between the model and the generated code.
+
 == Our Motto
 
 image::diagrams/fpp.png[]
