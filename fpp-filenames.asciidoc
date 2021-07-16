@@ -4,9 +4,12 @@ from FPP source files.
 *Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
 files specified on the command line.
 
-*Output:* The names of the XML and C++ files that would be generated
-by running `fpp-to-xml` and `fpp-to-cpp` on these files and importing
-their dependencies.
+*Output:* A list of file names, written one per line to standard output,
+with no other punctuation.
+The elements of the list are the names of the XML and C++ files
+that would be generated
+by running `fpp-to-xml` and `fpp-to-cpp` on _fl_ and importing the dependencies
+of _fl_.
 
 *Procedure*:
 
