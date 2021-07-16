@@ -1,1 +1,19 @@
-TODO
+This tool writes out the names of XML and C++ files generated
+from FPP source files.
+
+*Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
+files specified on the command line.
+
+*Output:* The names of the XML and C++ files that would be generated
+by running `fpp-to-xml` and `fpp-to-cpp` on these files and importing
+their dependencies.
+
+*Procedure*:
+
+. Parse each of the files in _fl_, generating a list _tul_ of translation units.
+When parsing, recursively resolve include specifiers.
+
+. Walk the AST and identify the definitions that cause XML or C++ files to
+be generated.
+
+. Write out the names of the generated files.
