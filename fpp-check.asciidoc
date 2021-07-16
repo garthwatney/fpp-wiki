@@ -9,7 +9,7 @@ files specified on the command line.
 
 *Output:* 
 
-. If the parsing succeeds, then no standard output; otherwise an error message.
+. If the check succeeds, then no standard output; otherwise an error message.
 
 . If the option `-u` is present, then write the names of all
 unconnected port arrays to the specified file.
