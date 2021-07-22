@@ -23,6 +23,7 @@ This page describes the tools for analyzing and translating FPP models.
 == General Notes
 
 * Arguments that take lists have their elements separated by commas. For example, `-i` _files_ means `-i file1,file2,...`.
+Empty lists are not allowed. For example, there must be at least one file in the list `file1,file2,...`.
 
 * You can run any tool with the `-h` option to get a help summary.
 
