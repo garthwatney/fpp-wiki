@@ -318,7 +318,7 @@ A `match` expression is like a `case` statement in C, but again it is
 much more powerful.
 In particular, you can use *pattern matching* to match both the type and the 
 structure of each case.
-By contrast, in a C case statement you can match only integer value.
+By contrast, in a C case statement you can match only integer values.
 
 For example, suppose we have a variable `result` that holds
 a value of type `Result`. We know that `result` can hold a `Value`
