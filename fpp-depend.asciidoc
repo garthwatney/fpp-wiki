@@ -2,6 +2,10 @@ This tool computes dependencies for FPP source files.
 
 *Flags:*
 
+. `-d` _file_: Write direct dependencies to _file_.
+
+. `-g` _file_: Write the names of generated files to _file_.
+
 . `-i` _file_: Write included dependencies to _file_.
 
 . `-m` _file_: Write missing dependencies to _file_.
@@ -13,10 +17,25 @@ files specified on the command line.
 
 . A list of files (the dependencies), written one per line to standard 
 output, as absolute paths with no other punctuation.
-Included files in the dependency graph are not listed as dependencies.
+The dependencies are transitive.
+For example, if `a.fpp` depends on `b.fpp` and `b.fpp` depends on
+`c.fpp`, then `a.fpp` depends on `c.fpp`.
+Included files in the dependency graph are not counted as dependencies.
 For example, if a file `a.fpp` includes `b.fpp` and
 `b.fpp` depends on `c.fpp`, then `a.fpp` depends on `c.fpp`
 but not `b.fpp`.
+
+. If option `-d` is present, then write direct dependencies to the specified
+file.
+For example, if `a.fpp` depends on `b.fpp` and `b.fpp` depends on `c.fpp`,
+then `a.fpp` directly depends on `b.fpp` but not on `c.fpp`.
+Included files in the dependency graph are counted as direct
+dependencies.
+
+. If option `-g` is present, then write the names of generated files
+to the specified file.
+The output here is the same as for
+https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
 
 . If option `-i` is present, then write included files in the dependency graph
 to the specified file.
@@ -41,6 +60,14 @@ https://github.com/fprime-community/fpp/wiki/Computing-Dependencies[computing
 dependencies] with inputs _a_ and _tul_.
 
 . Write out the dependency files in _a'_.
+
+. If option `-d` is present, then write the direct dependency file set of
+_a'_ to the specified file.
+
+. If option `-g` is present, then write the names of the generated files
+to the specified file.
+Use the same procedure as for
+https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
 
 . If option `-i` is present, then write the included file set of _a'_ to the specified file.
 
