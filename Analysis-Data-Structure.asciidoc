@@ -13,7 +13,15 @@ https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[component 
 
 * *Dependency file set:* The set of 
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[files] 
-on which the analysis depends.
+on which the analysis transitively depends.
+Used to calculate the input to analysis tools.
+Included files do not appear in this set.
+
+* *Direct dependency file set* The set of
+https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[files] 
+on which the analysis directly depends.
+Used to calculate dependencies for build environments.
+Included files do appear in this set.
 
 * *Included file set:* The set of 
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[files] 
@@ -28,6 +36,9 @@ The inner map maps phases to specifiers for one component instance.
 * *Input file set:* The set of 
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[files] 
 presented to the analyzer.
+
+* *Level:* A nonnegative integer representing the level of
+recursive analysis.
 
 * *Location specifier map:* A map from pairs (symbol kind, qualified name) to 
 location specifiers.
