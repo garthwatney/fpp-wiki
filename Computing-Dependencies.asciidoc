@@ -11,8 +11,12 @@ of _a_ must record the set of files presented for analysis.
 
 ==  Output
 
-. An analysis data structure _a_ with updated location specifier map, 
-dependency file set, direct dependency file set, and included file set.
+. An analysis data structure _a_ with updated
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[location specifier map],
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[dependency file set],
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[direct dependency file set],
+and
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[included file set].
 
 == Procedure
 
