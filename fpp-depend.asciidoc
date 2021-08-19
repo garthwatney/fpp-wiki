@@ -19,7 +19,7 @@ files specified on the command line.
 output, as absolute paths with no other punctuation.
 The dependencies are transitive.
 For example, if `a.fpp` depends on `b.fpp` and `b.fpp` depends on
-`c.fpp`, then `a.fpp` depends on `c.fpp`.
+`c.fpp`, then `a.fpp` depends on `b.cpp` and on `c.fpp`.
 Included files in the dependency graph are not counted as dependencies.
 For example, if a file `a.fpp` includes `b.fpp` and
 `b.fpp` depends on `c.fpp`, then `a.fpp` depends on `c.fpp`
