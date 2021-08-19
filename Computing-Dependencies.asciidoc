@@ -12,12 +12,16 @@ of _a_ must record the set of files presented for analysis.
 ==  Output
 
 . An analysis data structure _a_ with updated location specifier map, 
-dependency file set, and included file set.
+dependency file set, direct dependency file set, and included file set.
 
 == Procedure
 
 . *Resolve include specifiers:* Recursively resolve include specifiers in _tu_.
 Add the path of each included file to the included file set in _a_.
+If the 
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[level]
+is zero, then add the path of each included file to the direct dependency
+file set in _a_.
 
 . *Build the location specifier map:* Traverse each translation unit _tu_ in _tul_, updating the
 https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[scope name list]
@@ -71,6 +75,10 @@ of _a_ and is not already in the
 https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[dependency file set]
 of _a_, then
 
+... If the level is zero, then add _p_ to the
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[direct dependency file set]
+of _a_.
+
 ... Add _p_ to the
 https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[dependency file set]
 of _a_.
@@ -79,10 +87,13 @@ of _a_.
 
 .... Parse _f_, generating a translation unit _tu_.
 
-.... Run this algorithm on the list _[ tu ]_ with the value of _a_ computed so far.
-Let the result be the new _a_.
+.... Run this algorithm at the next level
+on the list _[ tu ]_ with the value of _a_ computed so far.
+Restore the current level and let the result be the new _a_.
 
-... Otherwise add _p_ to the https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[missing dependency file set] of _a_.
+... Otherwise add _p_ to the
+https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[missing 
+dependency file set] of _a_.
 
 . *Eliminate included files as dependencies:* For each file _f_ in the included
 file set, if _f_ appears in the dependency file set, then delete it
