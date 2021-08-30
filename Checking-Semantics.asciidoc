@@ -36,6 +36,4 @@
 
 . https://github.com/fprime-community/fpp/wiki/Check-Topology-Definitions[Check topology definitions] for _a_ and _tul_.
 
-. https://github.com/fprime-community/fpp/wiki/Check-Init-Specifiers[Check init specifiers] for _a_ and _tul_.
-
 . https://github.com/fprime-community/fpp/wiki/Check-Location-Specifiers[Check location specifiers] for _a_ and _tul_.

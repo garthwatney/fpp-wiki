@@ -27,12 +27,6 @@ Included files do appear in this set.
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[files] 
 included when parsing input.
 
-* *Init specifier map:* A map from component instance symbols
-to numeric phases to init specifiers.
-Each entry in the outer map represents all the init specifiers for
-the component instance.
-The inner map maps phases to specifiers for one component instance.
-
 * *Input file set:* The set of 
 https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[files] 
 presented to the analyzer.

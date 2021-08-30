@@ -32,6 +32,7 @@ Each AST node has a unique integer identifier.
 . A map from telemetry channel identifiers to telemetry channels.
 
 * *Component Instance:* An FPP component instance.
+Contains a map from execution phases to init specifiers.
 
 * *Connection:* An FPP connection consisting
 of an output port instance, an optional output port number,
