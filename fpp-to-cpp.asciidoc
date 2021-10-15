@@ -20,8 +20,8 @@ any code to be generated.
 . `-n` _file_: Write the names of the generated files to _file_.
 This is useful for collecting build dependencies.
 
-. `-p` _files_: Specify local prefixes to delete when importing and including files
-in generated code.
+. `-p` _files_: Specify local prefixes to delete when generating include
+guards and include paths.
 
 . `-s` _string size_: Specify the default string size. 
 If this option is present, the argument must be a decimal integer value between 1 and 1024.
