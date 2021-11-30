@@ -4,6 +4,8 @@ This tool computes dependencies for FPP source files.
 
 . `-d` _file_: Write direct dependencies to _file_.
 
+. `-f` _file_: Write F Prime framework dependencies to _file_.
+
 . `-g` _file_: Write the names of generated files to _file_.
 
 . `-i` _file_: Write included dependencies to _file_.
@@ -63,6 +65,14 @@ dependencies] with inputs _a_ and _tul_.
 
 . If option `-d` is present, then write the direct dependency file set of
 _a'_ to the specified file.
+
+. If option `-f` is present, then write F Prime framework dependencies
+to the specified file.
+The currently recognized dependencies are as follows:
+
+* `Fw_Comp` if there is a passive component in _tul_.
+* `Fw_CompQueued` if there is a queued or active component in _tul_.
+* `Os` if there is a guarded input port specifier in _tul_.
 
 . If option `-g` is present, then write the names of the generated files
 to the specified file.
