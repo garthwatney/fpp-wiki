@@ -34,6 +34,9 @@ then `a.fpp` directly depends on `b.fpp` but not on `c.fpp`.
 Included files in the dependency graph are counted as direct
 dependencies.
 
+. If option `-f` is present, then write F Prime framework dependencies
+to the specified file.
+
 . If option `-g` is present, then write the names of generated files
 to the specified file.
 The output here is the same as for
