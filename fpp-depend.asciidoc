@@ -73,9 +73,9 @@ _a'_ to the specified file.
 to the specified file.
 The currently recognized dependencies are as follows:
 
-* `Fw_Comp` if there is a passive component in _tul_.
-* `Fw_CompQueued` if there is a queued or active component in _tul_.
-* `Os` if there is a guarded input port specifier in _tul_.
+* `Fw_Comp` if _tul_ contains a passive component.
+* `Fw_CompQueued` if _tul_ contains a queued or active component.
+* `Os` if _tul_ contains a queued or active component or a guarded input port specifier.
 
 . If option `-g` is present, then write the names of the generated files
 to the specified file.
