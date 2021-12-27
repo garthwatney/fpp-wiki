@@ -27,3 +27,9 @@ Empty lists are not allowed. For example, there must be at least one file in the
 
 * You can run any tool with the `-h` option to get a help summary.
 
+* As of v1.0.0, FPP assumes that there are no shell or OS delimiter characters 
+in the path names of FPP files.
+In particular, you should replace spaces with dashes or underscores in (1) the 
+names of any FPP files and
+(2) the names of any directories that transitively contain FPP files.
+Similarly for `'`, `"`, `,`, `:`, etc.
