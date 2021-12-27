@@ -32,4 +32,4 @@ in the path names of FPP files.
 In particular, you should replace spaces with dashes or underscores in (1) the 
 names of any FPP files and
 (2) the names of any directories that transitively contain FPP files.
-Similarly for `'`, `"`, `,`, `:`, etc.
+Similarly for `'`, `"`, `,`, `/`, `:`, etc.
