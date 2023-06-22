@@ -3,9 +3,8 @@ https://nasa.github.io/fprime/[F Prime flight software framework].
 
 To use FPP, you write a model in the source language;
 then you use the FPP tools to generate XML and C++.
-Compared to writing XML by hand, FPP provides a cleaner and more succinct syntax,
-a well-defined semantics, good error checking and reporting, and better integration
-between the model and the generated code.
+FPP provides a clean and succinct syntax, a well-defined semantics, robust error checking and reporting,
+and strong integration between the model and the generated code.
 
 == Our Motto
 
