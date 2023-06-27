@@ -27,7 +27,7 @@ guards and include paths.
 If this option is present, the argument must be a decimal integer value between 1 and 1024.
 If this option is not present, the default string size is 80.
 
-. `-t`: Generate templates of derived classes instead of base classes.
+. `-t`: Generate component implementation templates and no other code.
 
 *Input:*  
 
