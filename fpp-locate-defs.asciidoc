@@ -17,7 +17,7 @@ file dependencies of `client.fpp` on specific files in _dir_.
 to compute the locations of symbols defined in _dir_ and
 used in `client.fpp`.
 
-*Flags:*
+*Options:*
 
 . `-d` _dir_: Specify the base directory for locating files.
 The default directory is the current directory.
