@@ -2,7 +2,7 @@ This tool parses FPP models, performs semantic checking on them, and writes out
 XML files that can be presented to F Prime tools (e.g., C++ autocoders, ground 
 data system) or external tools for further processing.
 
-*Flags:*
+*Options:*
 
 . `-d` _dir_: Set the output directory to _dir_.
 If this option is not present, then the output directory is
