@@ -1,6 +1,6 @@
 This tool parses FPP source files into an abstract syntax tree (AST) and optionally writes out the AST. It is mainly useful during compiler development.
 
-*Flags:*
+*Options:*
 
 . `-a`: Print the AST.
 
