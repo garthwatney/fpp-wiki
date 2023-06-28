@@ -6,11 +6,13 @@ This tool computes dependencies for FPP source files.
 
 . `-f` _file_: Write F Prime framework dependencies to _file_.
 
-. `-g` _file_: Write the names of generated files to _file_.
+. `-g` _file_: Write the names of generated autocode files to _file_.
 
 . `-i` _file_: Write included dependencies to _file_.
 
 . `-m` _file_: Write missing dependencies to _file_.
+
+. `-t` _file_: Write the names of generated implementation template files to _file_.
 
 *Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
 files specified on the command line.
@@ -37,7 +39,7 @@ dependencies.
 . If option `-f` is present, then write F Prime framework dependencies
 to the specified file.
 
-. If option `-g` is present, then write the names of generated files
+. If option `-g` is present, then write the names of generated autocode files
 to the specified file.
 The output here is the same as for
 https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
@@ -46,6 +48,11 @@ https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
 to the specified file.
 
 . If option `-m` is present, then write missing dependencies to the specified file.
+
+. If option `-t` is present, then write the names of generated implementation template
+files to the specified file.
+The output here is the same as for
+https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
 
 *Procedure:*
 
@@ -77,7 +84,7 @@ The currently recognized dependencies are as follows:
 * `Fw_CompQueued` if _tul_ contains a queued or active component.
 * `Os` if _tul_ contains a queued or active component or a guarded input port specifier.
 
-. If option `-g` is present, then write the names of the generated files
+. If option `-g` is present, then write the names of the generated autocode files
 to the specified file.
 Use the same procedure as for
 https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
@@ -85,3 +92,8 @@ https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
 . If option `-i` is present, then write the included file set of _a'_ to the specified file.
 
 . If option `-m` is present, then write the missing dependency file set of _a'_ to the specified file.
+
+. If option `-t` is present, then write the names of the generated implementation
+template files to the specified file.
+Use the same procedure as for
+https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
