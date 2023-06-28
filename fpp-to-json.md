@@ -1,0 +1,28 @@
+*Note: This tool is in development.*
+
+This tool parses an FPP model, performs semantic checking on it, and writes out 
+the model in Javascript Object Notation (JSON) format.
+
+*Options:*
+
+. TODO
+
+*Input:*  
+
+. A list _fl_ of files to translate: either the single file _stdin_ or a list of 
+files specified on the command line.
+
+*Output:* 
+
+. TODO
+
+*Procedure*:
+
+. Parse each of the files in _fl_, generating a list _tul_ of translation units.
+When parsing, recursively resolve include specifiers.
+
+. Perform https://github.com/fprime-community/fpp/wiki/Checking-Semantics[semantic checking] on 
+the concatenation of _tul_
+
+. Convert the AST, the location map, and the Analysis data structure to JSON objects. Write the JSON
+objects to files.
