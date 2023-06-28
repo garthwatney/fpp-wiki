@@ -3,7 +3,7 @@ from FPP source files.
 
 *Flags:*
 
-. `-t`: Write the names of generated implementation template files.
+. `-t`: Write the names of implementation template files.
 
 *Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
 files specified on the command line.
