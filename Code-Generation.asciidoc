@@ -35,7 +35,7 @@ As FPP becomes more mature, we will phase out the use of XML.
 
 . Convert each component definition to `ComponentAc.{hpp,cpp}` files (in development).
 
-. Convert each component definition to an implementation template (in development).
+. Generate an implementation template for each component definition (in development).
 
 . Generate unit tests files for each component definition (in development).
 
