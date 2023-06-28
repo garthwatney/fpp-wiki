@@ -1,6 +1,5 @@
-Below we set forth the plan for the first version of code generation.
-In this version, we generate XML where possible so we can use the existing F Prime back end.
-In a later version we will directly generate of C++ and any other needed code (e.g., XML for the ground data system).
+Below we set forth the plan for the current version of code generation.
+As FPP becomes more mature, we will phase out the use of XML.
 
 == XML
 
@@ -16,10 +15,28 @@ In a later version we will directly generate of C++ and any other needed code (e
 
 *Components:* Convert each component definition to a `ComponentAi.xml` file.
 
-*Topologies:* Convert each topology definition to a `TopologyAi.xml` file.
+*Topologies:* Convert each topology definition to a `TopologyAppAi.xml` file.
 
-== C++
+== {cpp}
 
-*Constants:* Generate a header file with constant definitions.
+*Constants:* Generate a header file `FppConstants.hpp` with constant definitions.
 
-*Topologies:* Generate C++ code for setting up a deployment.
+*Types:* 
+
+. Convert each struct definition to `SerializableAc.{hpp,cpp}` files.
+
+. Convert each enum definition to an `EnumAc.{hpp,cpp}` files.
+
+. Convert each array definition to an `ArrayAc.{hpp,cpp}` files.
+
+*Ports:* Convert each port definition to `PortAc.{hpp,cpp}` files.
+
+*Components:*
+
+. Convert each component definition to `ComponentAc.{hpp,cpp}` files (in development).
+
+. Convert each component definition to an implementation template (in development).
+
+. Generate unit tests files for each component definition (in development).
+
+*Topologies:* Convert each topology definition to `TopologyAc.{hpp,cpp}` files.
