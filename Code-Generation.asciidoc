@@ -19,7 +19,7 @@ As FPP becomes more mature, we will phase out the use of XML.
 
 == {cpp}
 
-*Constants:* Generate a header file `FppConstants.hpp` with constant definitions.
+*Constants:* Generate a header file `FppConstants.hpp` containing constant definitions.
 
 *Types:* 
 
