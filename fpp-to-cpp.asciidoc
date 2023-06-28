@@ -1,7 +1,7 @@
 This tool parses FPP models, performs semantic checking on them, and writes out 
 {cpp} files.
 
-*Flags:*
+*Options:*
 
 . `-d` _dir_: Set the output directory to _dir_.
 If this option is not present, then the output directory is
