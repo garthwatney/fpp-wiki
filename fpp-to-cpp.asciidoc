@@ -39,6 +39,10 @@ files specified on the command line.
 *Output:* 
 
 . A set of {cpp} files, written to the output directory.
+By default these are the autocoded F Prime C++ files for constants,
+types, ports, components, and topologies.
+If the `-t` option is present, then these are the template files
+for handwritten component implementations.
 
 . If the `-n` option is present, then the names of the generated {cpp}
 files.
