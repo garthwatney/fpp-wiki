@@ -15,7 +15,7 @@ Turn _F_ into a comma-separated list _F1_.
 see the locations of symbols exported in `exported.fpp` and used in 
 `client.fpp`.
 
-*Flags:*
+*Options:*
 
 . `-d` _dir_: Specify the base directory for locating files.
 The default directory is the current directory.
