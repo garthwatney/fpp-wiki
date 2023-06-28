@@ -40,3 +40,7 @@ As FPP becomes more mature, we will phase out the use of XML.
 . Generate unit tests files for each component definition (in development).
 
 *Topologies:* Convert each topology definition to `TopologyAc.{hpp,cpp}` files.
+
+== JSON
+
+. Convert the FPP model to a JSON representation (in development).
