@@ -1,7 +1,7 @@
 This tool writes out the names of XML and C++ files generated
 from FPP source files.
 
-*Flags:*
+*Options:*
 
 . `-t`: Write the names of implementation template files.
 
