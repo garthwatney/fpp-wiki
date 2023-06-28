@@ -1,9 +1,5 @@
 This tool parses FPP models, performs semantic checking on them, and writes out 
 {cpp} files.
-In the near term, this tool will provide features that are missing or 
-incomplete in the F Prime autocoders, for example
-generating {cpp} code for setting up FSW deployments.
-Eventually, this tool can replace the F Prime {cpp} autocoders.
 
 *Flags:*
 
