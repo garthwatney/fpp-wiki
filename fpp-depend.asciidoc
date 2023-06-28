@@ -1,6 +1,6 @@
 This tool computes dependencies for FPP source files.
 
-*Flags:*
+*Options:*
 
 . `-d` _file_: Write direct dependencies to _file_.
 
