@@ -19,7 +19,7 @@ sed 's/^\( *\)#/\1@ #/' | fpp-format $@ | sed 's/^\( *\)@ #/\1#/'
 It converts comments to annotations, runs `fpp-format`, and converts
 the annotations back to comments.
 
-*Flags:*
+*Options:*
 
 . `-i`: Resolve include specifiers.
 
