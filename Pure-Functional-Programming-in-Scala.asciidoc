@@ -374,8 +374,7 @@ In a pure style, we want value equality, not reference equality.
 === Case Objects
 
 In a pure functional style, we don't write case classes without members;
-instead we use *case objects*. For example, instead of `case class A() extends 
-B`
+instead we use *case objects*. For example, instead of `case class A() extends B`
 we write `case object A extends B`. A case object is a singleton instance of a
 case class.
 We can use case objects because objects carry no mutable data, so a single
