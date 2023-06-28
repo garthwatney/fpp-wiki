@@ -1,6 +1,6 @@
 This tool performs semantic checking of FPP models.
 
-*Flags:*
+*Options:*
 
 . `-u` _file_: Write unconnected ports to _file_.
 
