@@ -55,6 +55,11 @@ or (b) a special system file such as stdin or stdout.
 
 * *Internal port:* An internal port used in a component definition.
 
+* *Location:* A file and line number indicating the location of
+an AST node.
+
+* *Location map:* A map from AST nodes to their locations.
+
 * *Name:* A name, either qualified or unqualified.
 Names are not associated with nodes in the AST.
 For example, there is only one name `a.b.c`.
