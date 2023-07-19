@@ -6,7 +6,7 @@ the model in Javascript Object Notation (JSON) format.
 *Options:*
 
 . `-d` _dir_: Set the output directory to _dir_. If this option is not present, then the output directory is the current directory.
-. `-s`: Dump syntax only (location map and abstract syntax tree).
+. `-s`: Emit syntax only (location map and abstract syntax tree).
 
 *Input:*  
 
