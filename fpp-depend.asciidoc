@@ -28,8 +28,8 @@ For example, if `a.fpp` depends on `b.fpp` and `b.fpp` depends on
 `c.fpp`, then `a.fpp` depends on `b.cpp` and on `c.fpp`.
 Included files in the dependency graph are not counted as dependencies.
 For example, if a file `a.fpp` includes `b.fpp` and
-`b.fpp` depends on `c.fpp`, then `a.fpp` depends on `c.fpp`
-but not `b.fpp`.
+`a.fpp` depends on `c.fpp` after resolving the inclusion, then `a.fpp`
+depends on `c.fpp` but not `b.fpp`.
 
 . If option `-d` is present, then write direct dependencies to the specified
 file.
