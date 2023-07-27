@@ -23,6 +23,8 @@ guards and include paths.
 If this option is present, the argument must be a decimal integer value between 1 and 1024.
 If this option is not present, the default string size is 80.
 
+. `-u`: Generate unit test code.
+
 . `-t`: Generate component implementation templates and no other code.
 
 *Input:*  
@@ -35,10 +37,20 @@ files specified on the command line.
 *Output:* 
 
 . A set of {cpp} files, written to the output directory.
-By default these are the autocoded F Prime {cpp} files for constants,
+
+.. By default these are the autocoded F Prime {cpp} files for constants,
 types, ports, components, and topologies.
-If the `-t` option is present, then these are the template files
-for handwritten component implementations.
+
+.. If the `-u` option is present, then these files are the standard autocoded
+files (item 1.ii) plus the autocoded files for unit testing.
+
+.. If the `-t` option is present, then
+
+... By default these are the template files for handwritten component
+implementations.
+
+... If the `-u` option is also present, then these are the template files
+for handwritten component unit test implementations.
 
 . If the `-n` option is present, then the names of the generated {cpp}
 files.
