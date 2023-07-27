@@ -12,7 +12,7 @@ This tool computes dependencies for FPP source files.
 
 . `-m` _file_: Write missing dependencies to _file_.
 
-. `-u`: Configure the `-g` and `-t` options to write unit test files.
+. `-u`: Configure the `-g` and `-t` options to write the names of unit test files.
 
 . `-t` _file_: Write the names of generated implementation template files to _file_.
 
