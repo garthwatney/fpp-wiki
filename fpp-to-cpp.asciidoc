@@ -25,7 +25,7 @@ If this option is not present, the default string size is 80.
 
 . `-u`: Generate unit test code.
 
-. `-t`: Generate component implementation templates and no other code.
+. `-t`: Generate component implementation templates.
 
 *Input:*  
 
