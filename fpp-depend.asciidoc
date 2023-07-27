@@ -12,6 +12,8 @@ This tool computes dependencies for FPP source files.
 
 . `-m` _file_: Write missing dependencies to _file_.
 
+. `-u`: Configure the `-g` and `-t` options to write unit test files.
+
 . `-t` _file_: Write the names of generated implementation template files to _file_.
 
 *Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
@@ -42,7 +44,8 @@ to the specified file.
 . If option `-g` is present, then write the names of generated autocode files
 to the specified file.
 The output here is the same as for
-https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
+https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`],
+or `fpp-filenames` `-u` if the `-u` option is also present.
 
 . If option `-i` is present, then write included files in the dependency graph
 to the specified file.
@@ -52,7 +55,8 @@ to the specified file.
 . If option `-t` is present, then write the names of generated implementation template
 files to the specified file.
 The output here is the same as for
-https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`].
+https://github.com/fprime-community/fpp/wiki/fpp-filenames[`fpp-filenames`] `-t`,
+or `fpp-filenames` `-u` `-t`, if the `-u` option is also present.
 
 *Procedure:*
 
