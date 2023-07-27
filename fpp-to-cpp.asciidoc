@@ -41,7 +41,7 @@ files specified on the command line.
 .. By default these are the autocoded F Prime {cpp} files for constants,
 types, ports, components, and topologies.
 
-.. If the `-u` option is present, then these files are the standard autocoded
+.. If the `-u` option is present, then these are the standard autocoded
 files (item 1.ii) plus the autocoded files for unit testing.
 
 .. If the `-t` option is present, then
