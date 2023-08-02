@@ -33,14 +33,14 @@ As FPP becomes more mature, we will phase out the use of XML.
 
 *Components:*
 
-. Convert each component definition to `ComponentAc.{hpp,cpp}` files (in development).
+. Convert each component definition to `ComponentAc.{hpp,cpp}` files.
 
-. Generate an implementation template for each component definition (in development).
+. Generate an implementation template for each component definition.
 
-. Generate unit tests files for each component definition (in development).
+. Generate unit test files for each component definition (in development).
 
 *Topologies:* Convert each topology definition to `TopologyAc.{hpp,cpp}` files.
 
 == JSON
 
-. Convert the FPP model to a JSON representation (in development).
+. Convert the FPP model to a JSON representation.
