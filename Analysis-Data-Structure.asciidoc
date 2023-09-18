@@ -1,4 +1,6 @@
 The *Analysis Data Structure* represents the results of FPP source analysis.
+See https://github.com/fprime-community/fpp/blob/main/compiler/lib/src/main/scala/analysis/Analysis.scala[Analysis.scala] to see the scala data structure.
+
 It contains the following members.
 
 * *Component map:* A map from
