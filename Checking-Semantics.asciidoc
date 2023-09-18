@@ -8,6 +8,8 @@
 
 . Otherwise an error and no output.
 
+For implementation, see the https://github.com/fprime-community/fpp/tree/main/compiler/lib/src/main/scala/analysis/CheckSemantics[CheckSemantics] package.
+
 == Procedure
 
 . Create an empty analysis data structure _a_.
