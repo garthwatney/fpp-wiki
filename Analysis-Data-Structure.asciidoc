@@ -1,4 +1,4 @@
-The https://github.com/fprime-community/fpp/blob/main/compiler/lib/src/main/scala/analysis/Analysis.scala[Analysis.scala] represents the results of FPP source analysis.
+The https://github.com/fprime-community/fpp/blob/main/compiler/lib/src/main/scala/analysis/Analysis.scala[*Analysis Data Structure*] represents the results of FPP source analysis.
 
 It contains the following members.
 
