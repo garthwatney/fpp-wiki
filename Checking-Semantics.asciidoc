@@ -1,3 +1,5 @@
+For implementation, see the https://github.com/fprime-community/fpp/tree/main/compiler/lib/src/main/scala/analysis/CheckSemantics[CheckSemantics] package.
+
 == Input
 
 . A list _tul_ of translation units
@@ -7,8 +9,6 @@
 . If the semantic check passes, an https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis data structure] _a_ representing the results of the analysis.
 
 . Otherwise an error and no output.
-
-For implementation, see the https://github.com/fprime-community/fpp/tree/main/compiler/lib/src/main/scala/analysis/CheckSemantics[CheckSemantics] package.
 
 == Procedure
 
