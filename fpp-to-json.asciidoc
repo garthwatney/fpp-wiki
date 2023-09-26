@@ -1,5 +1,3 @@
-*Note: This tool is in development.*
-
 This tool parses an FPP model, performs semantic checking on it, and writes out 
 the model in Javascript Object Notation (JSON) format.
 
