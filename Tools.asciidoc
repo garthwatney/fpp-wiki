@@ -18,7 +18,7 @@ This page describes the tools for analyzing and translating FPP models.
 
 * https://github.com/fprime-community/fpp/wiki/fpp-to-cpp[fpp-to-cpp]
 
-* https://github.com/fprime-community/fpp/wiki/fpp-to-json[fpp-to-json] (in development)
+* https://github.com/fprime-community/fpp/wiki/fpp-to-json[fpp-to-json]
 
 * https://github.com/fprime-community/fpp/wiki/fpp-to-xml[fpp-to-xml]
 
