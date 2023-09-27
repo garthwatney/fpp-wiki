@@ -45,7 +45,7 @@ types, ports, components, and topologies.
 
 .. If the `-u` option is present and the `-t` option is not present, then
 
-... These are the standard autocoded files (item 1.i) plus the autocoded files for unit testing.
+... These are the autocoded files for unit testing.
 
 ... If the `-a` option is present, then these files include code for setting up
 unit tests.
