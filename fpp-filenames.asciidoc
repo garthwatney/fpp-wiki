@@ -3,6 +3,8 @@ from FPP source files.
 
 *Options:*
 
+. `-a`: Enable automatic setup of unit tests.
+
 . `-u`: Write the names of unit test files.
 
 . `-t`: Write the names of implementation template files.
@@ -18,7 +20,7 @@ that would be generated
 by running `fpp-to-xml` and `fpp-to-cpp` on _fl_ and importing the dependencies
 of _fl_.
 
-. If the option `-u` or the option `-t` or both are present, then the listed C++ files
+. If one or more of the options `-a`, `-t` or `-t` are present, then the listed C++ files
 are the ones that would be generated
 by running `fpp-to-cpp` with the corresponding options.
 
