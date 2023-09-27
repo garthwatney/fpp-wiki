@@ -20,7 +20,7 @@ that would be generated
 by running `fpp-to-xml` and `fpp-to-cpp` on _fl_ and importing the dependencies
 of _fl_.
 
-. If one or more of the options `-a`, `-t` or `-t` are present, then the listed C++ files
+. If one or more of the options `-a`, `-t`, or `-t` are present, then the listed C++ files
 are the ones that would be generated
 by running `fpp-to-cpp` with the corresponding options.
 
