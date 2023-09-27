@@ -3,6 +3,8 @@ This tool parses FPP models, performs semantic checking on them, and writes out
 
 *Options:*
 
+. `-a`: Enable automatic setup of unit tests.
+
 . `-d` _dir_: Set the output directory to _dir_.
 If this option is not present, then the output directory is
 the current directory.
@@ -41,8 +43,12 @@ files specified on the command line.
 .. By default these are the autocoded F Prime {cpp} files for constants,
 types, ports, components, and topologies.
 
-.. If the `-u` option is present and the `-t` option is not present, then these are the 
-standard autocoded files (item 1.ii) plus the autocoded files for unit testing.
+.. If the `-u` option is present and the `-t` option is not present, then
+
+... These are the standard autocoded files (item 1.ii) plus the autocoded files for unit testing.
+
+... If the `-a` option is present, then these files include code for setting up
+unit tests.
 
 .. If the `-t` option is present, then
 
@@ -51,6 +57,9 @@ implementations.
 
 ... If the `-u` option is also present, then these are the template files
 for handwritten component unit test implementations.
+
+... If the `-a` option is not present, then these files include code
+for setting up unit tests.
 
 . If the `-n` option is present, then the names of the generated {cpp}
 files.
