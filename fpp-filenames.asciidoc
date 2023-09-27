@@ -5,9 +5,9 @@ from FPP source files.
 
 . `-a`: Enable automatic setup of unit tests.
 
-. `-u`: Write the names of unit test files.
-
 . `-t`: Write the names of implementation template files.
+
+. `-u`: Write the names of unit test files.
 
 *Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
 files specified on the command line.
