@@ -8,13 +8,13 @@ This tool computes dependencies for FPP source files.
 
 . `-f` _file_: Write F Prime framework dependencies to _file_.
 
-. `-g` _file_: Write the names of generated autocode files to _file_. Write the names of generated implementation template files to _file_ `.template`.
+. `-g` _file_: Write the names of generated autocode files to _file_.
 
 . `-i` _file_: Write included dependencies to _file_.
 
 . `-m` _file_: Write missing dependencies to _file_.
 
-. `-u`: _file_: Write the names of generated unit test autocode files to _file_. Write the names of generated unit test implementation template files to _file_ `.template`.
+. `-u`: _file_: Write the names of generated unit test autocode files to _file_.
 
 *Input:*  A list _fl_ of files: either the single file _stdin_ or a list of 
 files specified on the command line.
@@ -41,20 +41,18 @@ dependencies.
 . If option `-f` is present, then write F Prime framework dependencies
 to the specified file.
 
-. If option `-g` is present, then (a) write the names of generated autocode files
-to the specified file and (b) write the names of generated implementation template
-files to a file whose name is the specified file with `.template` added as a suffix.
+. If option `-g` is present, then write the names of generated autocode files
+to the specified file.
 
 . If option `-i` is present, then write included files in the dependency graph
 to the specified file.
 
 . If option `-m` is present, then write missing dependencies to the specified file.
 
-. If option `-u` is present, then (a) write the names of generated unit test files
-to the specified file and (b) write the names of generated unit test implementation template
-files to a file whose name is the specified file with `.template` added as a suffix.
+. If option `-u` is present, then write the names of generated unit test files
+to the specified file.
 If the `-a` option is present, then the code for setting up unit tests is included
-with the files in part (a). Otherwise it is included with the files in part (b).
+in the list of files.
 
 *Procedure:*
 
