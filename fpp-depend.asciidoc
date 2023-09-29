@@ -21,7 +21,7 @@ files specified on the command line.
 
 *Output:* 
 
-. Write list of files (the dependencies) one per line to standard 
+. Write a list of files (the dependencies) one per line to standard 
 output, as absolute paths with no other punctuation.
 The dependencies are transitive.
 For example, if `a.fpp` depends on `b.fpp` and `b.fpp` depends on
