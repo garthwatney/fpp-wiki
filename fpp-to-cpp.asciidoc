@@ -10,7 +10,7 @@ If this option is not present, then the output directory is
 the current directory.
 
 . `-i` _files_: Import _files_.
-These files are read in for their symbols, but their definitions do not cause 
+The definitions in these files are part ofthe FPP model, but they do not cause 
 any code to be generated.
 
 . `-g` _prefix_: Specify a prefix for include guards that have no associated namespace.
