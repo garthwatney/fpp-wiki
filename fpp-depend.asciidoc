@@ -51,7 +51,7 @@ to the specified file.
 
 . If option `-u` is present, then write the names of generated unit test files
 to the specified file.
-If the `-a` option is present, then include the auto-generated test helper code
+If option `-a` is present, then include the auto-generated test helper code
 in the list of files.
 
 *Procedure:*
