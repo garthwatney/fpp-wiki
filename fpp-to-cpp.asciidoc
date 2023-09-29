@@ -3,7 +3,7 @@ This tool parses FPP models, performs semantic checking on them, and writes out
 
 *Options:*
 
-. `-a`: Enable automatic setup of unit tests.
+. `-a`: Enable unit test auto helpers.
 
 . `-d` _dir_: Set the output directory to _dir_.
 If this option is not present, then the output directory is
@@ -47,8 +47,8 @@ types, ports, components, and topologies.
 
 ... These are the autocoded base class files for unit test components.
 
-... If the `-a` option is present, then these files include code for setting up
-unit tests.
+... If the `-a` option is present, then these files include auto-generated helper
+code running unit tests.
 
 .. If the `-t` option is present, then
 
@@ -60,8 +60,8 @@ implementations.
 .... These are the template files
 for handwritten component unit test implementations.
 
-.... If the `-a` option is not present, then these files include code
-for setting up unit tests.
+.... If the `-a` option is not present, then these files include auto-generated helper
+code running unit tests.
 
 . If the `-n` option is present, then the names of the generated {cpp}
 files.
