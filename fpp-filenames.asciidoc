@@ -3,7 +3,7 @@ from FPP source files.
 
 *Options:*
 
-. `-a`: Enable automatic setup of unit tests.
+. `-a`: Enable unit test auto helpers.
 
 . `-t`: Write the names of implementation template files.
 
