@@ -2,7 +2,7 @@ This tool computes dependencies for FPP source files.
 
 *Options:*
 
-. `-a`: Enable automatic setup of unit tests.
+. `-a`: Enable unit test auto helpers.
 
 . `-d` _file_: Write direct dependencies to _file_.
 
@@ -51,7 +51,7 @@ to the specified file.
 
 . If option `-u` is present, then write the names of generated unit test files
 to the specified file.
-If the `-a` option is present, then the code for setting up unit tests is included
+If the `-a` option is present, then include the auto-generated test helper code
 in the list of files.
 
 *Procedure:*
