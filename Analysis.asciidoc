@@ -31,6 +31,10 @@ Each AST node has a unique integer identifier.
 
 . A map from telemetry channel identifiers to telemetry channels.
 
+. A map from container identifiers to containers.
+
+. A map from record identifiers to records.
+
 * *Component Instance:* An FPP component instance.
 Contains a map from execution phases to init specifiers.
 
@@ -42,7 +46,9 @@ an input port instance, and an optional input port number.
 graph pattern consisting of a pattern kind, a
 source instance, and a list of target instances.
 
-* *Event:* An FPP event report specifier.
+* *Container:* An FPP specifier for a data product container.
+
+* *Event:* An FPP specifier for an event report.
 
 * *Expression:* A syntactic expression. Expressions with identical 
 form (e.g., two instances of the literal value `3`) appearing at distinct
@@ -95,6 +101,8 @@ Qualified identifiers representing the same qualified name (e.g., the name
 `a.b.c`) and appearing
 at distinct nodes in the AST count as distinct qualified
 identifiers.
+
+* *Record:* An FPP specifier for a data product record.
 
 * *Scope:* A collection of name-symbol maps that represents a single flat scope 
 (the global scope or a brace-delimited scope). Within each scope, there is 
