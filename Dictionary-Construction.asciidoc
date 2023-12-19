@@ -15,30 +15,30 @@
 ... Retrieve the `opcode` from the command and add it to the `baseId` to create the `resolvedId`
 ... Add the `resolvedId` to mapping from `resolvedId` to `command`
 
-.. *Build the resolved identifier to telemetry channel map:* Traverse `baseId` to `component` map and for each entry
+.. *Build the resolved identifier to telemetry channel map:*
 ... Get `tlmChannelMap` from the `component`
 ... Retrieve the `identifier` from the telemetry channel and add it to the `baseId` to create the `resolvedId`
 ... Add the `resolvedId` to mapping from `resolvedId` to `tlmChannel`
 
-.. *Build the resolved identifier to telemetry event map:* Traverse `baseId` to `component` map and for each entry
+.. *Build the resolved identifier to telemetry event map:*
 ... Get `eventMap` from the `component`
 ... Retrieve the `identifier` from the event and add it to the `baseId` to create the `resolvedId`
 ... Add the `resolvedId` to mapping from `resolvedId` to `event`
 
 
-.. *Build the resolved identifier to parameter map:* Traverse `baseId` to `component` map and for each entry
+.. *Build the resolved identifier to parameter map:*
 ... Get `paramMap` from the `component`
 ... Retrieve the `identifier` from the parameter and add it to the `baseId` to create the `resolvedId`
 ... Add the `resolvedId` to mapping from `resolvedId` to `param`
 
 
-.. *Build the resolved identifier to record map:* Traverse `baseId` to `component` map and for each entry
+.. *Build the resolved identifier to record map:*
 ... Get `recordMap` from the `component`
 ... Retrieve the `identifier` from the parameter and add it to the `baseId` to create the `resolvedId`
 ... Add the `resolvedId` to mapping from `resolvedId` to `record`
 
 
-.. *Build the resolved identifier to collection map:* Traverse `baseId` to `component` map and for each entry
+.. *Build the resolved identifier to collection map:*
 ... Get `collectionMap` from the `component`
 ... Retrieve the `identifier` from the parameter and add it to the `baseId` to create the `resolvedId`
 ... Add the `resolvedId` to mapping from `resolvedId` to `collection`
