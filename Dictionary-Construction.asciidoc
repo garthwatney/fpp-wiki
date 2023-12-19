@@ -9,35 +9,36 @@
 . *Build the base identifier to component instance map:* From the analysis, retrieve the `componentInstanceMap`. Traverse the `componentInstance` map and for each `ComponentInstance`
 .. Get the `baseId` and `component` and add to mapping from `baseId` to `component`
 
-. *Build the resolved identifier to command map:* Traverse `baseId` to `component` map and for each entry
-.. Get `commandMap` from the `component`
-.. Retrieve the `opcode` from the command and add it to the `baseId` to create the `resolvedId`
-.. Add the `resolvedId` to mapping from `resolvedId` to `command`
+. *Resolve identifiers and construct dictionary content maps (for commands, telemetry channels, events, parameters, records, and collections) * Traverse `baseId` to `component` map and for each entry
+.. *Build the resolved identifier to command map:*
+... Get `commandMap` from the `component`
+... Retrieve the `opcode` from the command and add it to the `baseId` to create the `resolvedId`
+... Add the `resolvedId` to mapping from `resolvedId` to `command`
 
-. *Build the resolved identifier to telemetry channel map:* Traverse `baseId` to `component` map and for each entry
-.. Get `tlmChannelMap` from the `component`
-.. Retrieve the `identifier` from the telemetry channel and add it to the `baseId` to create the `resolvedId`
-.. Add the `resolvedId` to mapping from `resolvedId` to `tlmChannel`
+.. *Build the resolved identifier to telemetry channel map:* Traverse `baseId` to `component` map and for each entry
+... Get `tlmChannelMap` from the `component`
+... Retrieve the `identifier` from the telemetry channel and add it to the `baseId` to create the `resolvedId`
+... Add the `resolvedId` to mapping from `resolvedId` to `tlmChannel`
 
-. *Build the resolved identifier to telemetry event map:* Traverse `baseId` to `component` map and for each entry
-.. Get `eventMap` from the `component`
-.. Retrieve the `identifier` from the event and add it to the `baseId` to create the `resolvedId`
-.. Add the `resolvedId` to mapping from `resolvedId` to `event`
-
-
-. *Build the resolved identifier to parameter map:* Traverse `baseId` to `component` map and for each entry
-.. Get `paramMap` from the `component`
-.. Retrieve the `identifier` from the parameter and add it to the `baseId` to create the `resolvedId`
-.. Add the `resolvedId` to mapping from `resolvedId` to `param`
+.. *Build the resolved identifier to telemetry event map:* Traverse `baseId` to `component` map and for each entry
+... Get `eventMap` from the `component`
+... Retrieve the `identifier` from the event and add it to the `baseId` to create the `resolvedId`
+... Add the `resolvedId` to mapping from `resolvedId` to `event`
 
 
-. *Build the resolved identifier to record map:* Traverse `baseId` to `component` map and for each entry
-.. Get `recordMap` from the `component`
-.. Retrieve the `identifier` from the parameter and add it to the `baseId` to create the `resolvedId`
-.. Add the `resolvedId` to mapping from `resolvedId` to `record`
+.. *Build the resolved identifier to parameter map:* Traverse `baseId` to `component` map and for each entry
+... Get `paramMap` from the `component`
+... Retrieve the `identifier` from the parameter and add it to the `baseId` to create the `resolvedId`
+... Add the `resolvedId` to mapping from `resolvedId` to `param`
 
 
-. *Build the resolved identifier to collection map:* Traverse `baseId` to `component` map and for each entry
-.. Get `collectionMap` from the `component`
-.. Retrieve the `identifier` from the parameter and add it to the `baseId` to create the `resolvedId`
-.. Add the `resolvedId` to mapping from `resolvedId` to `collection`
+.. *Build the resolved identifier to record map:* Traverse `baseId` to `component` map and for each entry
+... Get `recordMap` from the `component`
+... Retrieve the `identifier` from the parameter and add it to the `baseId` to create the `resolvedId`
+... Add the `resolvedId` to mapping from `resolvedId` to `record`
+
+
+.. *Build the resolved identifier to collection map:* Traverse `baseId` to `component` map and for each entry
+... Get `collectionMap` from the `component`
+... Retrieve the `identifier` from the parameter and add it to the `baseId` to create the `resolvedId`
+... Add the `resolvedId` to mapping from `resolvedId` to `collection`
