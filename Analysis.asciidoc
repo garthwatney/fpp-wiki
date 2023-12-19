@@ -180,4 +180,5 @@ that the use refers to).
 
 * https://github.com/fprime-community/fpp/wiki/Computing-Dependencies[Computing Dependencies]
 * https://github.com/fprime-community/fpp/wiki/Checking-Semantics[Checking Semantics]
+* https://github.com/fprime-community/fpp/wiki/Dictionary-Construction[Dictionary Construction]
 
