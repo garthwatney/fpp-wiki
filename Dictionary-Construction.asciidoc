@@ -9,7 +9,7 @@
 . *Build the base identifier to component instance map:* From the analysis, retrieve the `componentInstanceMap`. Traverse the `componentInstance` map and for each `ComponentInstance`
 .. Get the `baseId` and `component` and add to mapping from `baseId` to `component`
 
-. *Resolve identifiers and construct dictionary content maps (for commands, telemetry channels, events, parameters, records, and collections) * Traverse `baseId` to `component` map and for each entry
+. *Resolve identifiers and construct dictionary content maps (for commands, telemetry channels, events, parameters, records, and collections)*: Traverse `baseId` to `component` map and for each entry
 .. *Build the resolved identifier to command map:*
 ... Get `commandMap` from the `component`
 ... Retrieve the `opcode` from the command and add it to the `baseId` to create the `resolvedId`
