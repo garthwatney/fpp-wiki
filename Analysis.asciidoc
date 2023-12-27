@@ -49,13 +49,13 @@ source instance, and a list of target instances.
 * *Container:* An FPP specifier for a data product container.
 
 * *Dictionary Data Structure:* Structure representing the dictionary produced for an FPP topology, consisting of:
-. A map from Component Instance base identifiers to Components
-. A map from resolved identifiers to Commands
-. A map from resolved identifiers to Telemetry Channels
-. A map from resolved identifiers to Events
-. A map from resolved identifiers to Parameters
-. A map from resolved identifiers to Records
-. A map from resolved identifiers to Collections
+. A map from component instance base identifiers to components
+. A map from resolved identifiers to commands
+. A map from resolved identifiers to telemetry channels
+. A map from resolved identifiers to events
+. A map from resolved identifiers to parameters
+. A map from resolved identifiers to records
+. A map from resolved identifiers to collections
 
 
 * *Event:* An FPP specifier for an event report.
