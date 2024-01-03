@@ -6,7 +6,7 @@
 . If dictionary construction fails, an error and no output
 
 == Procedure
-. *Build the base identifier to component instance map:* From the analysis, retrieve the `componentInstanceMap`. Traverse the `componentInstance` map and for each `ComponentInstance`
+. *Build the base identifier to component instance map:* From the analysis, retrieve the component instance map. Traverse the component instance map and for each component instance
 .. Get the base ID and component and add to mapping from base ID to component
 
 . *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse `baseId` to `component` map and for each entry
