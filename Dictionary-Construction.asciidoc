@@ -9,7 +9,7 @@
 . *Build the base identifier to component instance map:* From the analysis, retrieve the component instance map. Traverse the component instance map and for each component instance
 .. Get the base ID and component and add to mapping from base ID to component
 
-. *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse `baseId` to `component` map and for each entry
+. *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse base ID to component map and for each entry
 .. *Build the resolved identifier to command map:*
 ... Get command map from the component and for each command
 .... Retrieve the opcode from the command and add it to the base ID to create the resolved ID
