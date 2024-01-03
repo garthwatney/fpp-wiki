@@ -50,8 +50,11 @@ source instance, and a list of target instances.
 
 * *Dictionary Data Structure:* Structure representing the dictionary produced for an FPP topology, consisting of:
 . A map from component instance base identifiers to components
+
 . A map from resolved identifiers to commands
+
 . A map from resolved identifiers to telemetry channels
+
 . A map from resolved identifiers to events
 . A map from resolved identifiers to parameters
 . A map from resolved identifiers to records
