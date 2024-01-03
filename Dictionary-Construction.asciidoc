@@ -11,34 +11,34 @@
 
 . *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse `baseId` to `component` map and for each entry
 .. *Build the resolved identifier to command map:*
-... Get command map from the `component`
-... Retrieve the opcode from the command and add it to the base ID to create the resolved ID
-... Add the resolved ID to mapping from resolved ID to command
+... Get command map from the component and for each command
+.... Retrieve the opcode from the command and add it to the base ID to create the resolved ID
+.... Add the resolved ID to mapping from resolved ID to command
 
 .. *Build the resolved identifier to telemetry channel map:*
-... Get telemetry channel map from the component
-... Retrieve the identifier from the telemetry channel and add it to the base ID to create the resolved ID
-... Add the resolved ID to mapping from resolved ID to telemetry channel
+... Get telemetry channel map from the component and for each telemetry channel
+.... Retrieve the identifier from the telemetry channel and add it to the base ID to create the resolved ID
+.... Add the resolved ID to mapping from resolved ID to telemetry channel
 
 .. *Build the resolved identifier to telemetry event map:*
-... Get event map from the component
-... Retrieve the identifier from the event and add it to the base ID to create the resolved ID
-... Add the resolved ID to mapping from resolved ID to event
+... Get event map from the component and for each event
+.... Retrieve the identifier from the event and add it to the base ID to create the resolved ID
+.... Add the resolved ID to mapping from resolved ID to event
 
 
 .. *Build the resolved identifier to parameter map:*
-... Get parameter map from the component
-... Retrieve the identifier from the parameter and add it to the base ID to create the resolved ID
-... Add the resolved ID to mapping from resolved ID to parameter
+... Get parameter map from the component and for each parameter
+.... Retrieve the identifier from the parameter and add it to the base ID to create the resolved ID
+.... Add the resolved ID to mapping from resolved ID to parameter
 
 
 .. *Build the resolved identifier to record map:*
-... Get record map from the component
-... Retrieve the identifier from the record and add it to the base ID to create the resolved ID
-... Add the resolved ID to mapping from resolved ID to record
+... Get record map from the component and for each record
+.... Retrieve the identifier from the record and add it to the base ID to create the resolved ID
+.... Add the resolved ID to mapping from resolved ID to record
 
 
 .. *Build the resolved identifier to collection map:*
-... Get collection map from the component
-... Retrieve the identifier from the collection and add it to the base ID to create the resolved ID
-... Add the resolved ID to mapping from resolved ID to collection
+... Get collection map from the component and for each collection
+.... Retrieve the identifier from the collection and add it to the base ID to create the resolved ID
+.... Add the resolved ID to mapping from resolved ID to collection
