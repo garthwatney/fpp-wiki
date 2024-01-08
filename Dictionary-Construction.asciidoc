@@ -17,7 +17,7 @@
 
 . *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse component instance map and for each dictionary element in the component (ie: command map, telemetry channel map, event map, parameter map, record map, collection map):
 .. *Build the resolved identifier to dictionary element map:*
-.. Get map from the component and for each element in the map
+... Get map from the component and for each element in the map
 ... Retrieve the identifier from the element and add it to the base ID of the component instance to create the resolved ID
 ... Add the resolved ID to mapping from resolved ID to dictionary element
 ... Return a ResolvedComponentInstance intermediate data structure consisting of resolved ID maps for commands, telemetry channels, events, parameters, records, and collections
