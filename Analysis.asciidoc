@@ -49,12 +49,25 @@ source instance, and a list of target instances.
 * *Container:* An FPP specifier for a data product container.
 
 * *Dictionary Data Structure:* Structure representing the dictionary produced for an FPP topology, consisting of:
+
 . The set of type symbols used in the topology
+
+. A set representing the subset of type symbols that correspond to arrays
+
+. A set representing the subset of type symbols that correspond to enumerations
+
+. A set representing the subset of type symbols that correspond to structs
+
 . A map from resolved identifiers to commands
+
 . A map from resolved identifiers to telemetry channels
+
 . A map from resolved identifiers to events
+
 . A map from resolved identifiers to parameters
+
 . A map from resolved identifiers to records
+
 . A map from resolved identifiers to containers
 
 * *Event:* An FPP specifier for an event report.
