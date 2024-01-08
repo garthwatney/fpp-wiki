@@ -15,8 +15,13 @@
 .. For each entry in the used symbol, create 3 subsets consisting of only array symbols, enumeration symbols, and struct symbols
 
 
-. *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse base ID to component map and for each dictionary element (ie: command map, telemetry channel map, event map, parameter map, record map, collection map):
+. *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse component instance map and for each dictionary element in the component (ie: command map, telemetry channel map, event map, parameter map, record map, collection map):
 .. *Build the resolved identifier to dictionary element map:*
 ... Get map from the component and for each element in the map
 .... Retrieve the identifier from the element and add it to the base ID of the component instance to create the resolved ID
 .... Add the resolved ID to mapping from resolved ID to dictionary element
+.... Return a ResolvedComponentInstance intermediate data structure consisting of resolved ID maps for commands, telemetry channels, events, parameters, records, and collections
+
+. *Merge list of ResolvedComponentInstance maps into a single map*
+.. Traverse list of ResolvedComponentInstance data structure and merge each resolved map type (ie: command map, telemetry channel map, event map, parameter map, record map, collection map) into one
+.. Return Dictionary data structure consisting of all resolved command, telemetry channel, event, parameter, record, and collection maps for all component instances in the topology
