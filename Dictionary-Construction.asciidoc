@@ -6,7 +6,7 @@
 . If dictionary construction fails, an error and no output
 
 == Procedure
-. *Populate used symbols *: Traverse component instance map and for each component
+. *Populate used symbols*: Traverse component instance map and for each component
 .. For all command, event, telemetry channel, parameter, record, and container maps:
 ... Get all used symbols for all entries in the map
 ... Check to see if a valid analysis is returned, if not then raise an error
