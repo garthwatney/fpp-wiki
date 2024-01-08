@@ -13,6 +13,7 @@
 ... If the analysis is valid, return the analysis' used symbol set
 .. Flatten list of sets into a single set consisting of used symbols
 .. For each entry in the used symbol, create 3 subsets consisting of only array symbols, enumeration symbols, and struct symbols
+.. Return Dictionary data structure consisting of populated used symbol sets (all symbols, arrays only, enumerations only, and structs only)
 
 
 . *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse component instance map and for each dictionary element in the component (ie: command map, telemetry channel map, event map, parameter map, record map, collection map):
