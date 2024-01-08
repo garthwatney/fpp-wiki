@@ -1,6 +1,6 @@
 == Input
 . An analysis data structure
-. A topology to construct the dictionary for
+. A topology data structure to construct dictionary for
 
 == Output
 . Dictionary data structure consisting of dictionary contents
