@@ -6,8 +6,14 @@
 . If dictionary construction fails, an error and no output
 
 == Procedure
-. *Build the base identifier to component instance map:* From the analysis, retrieve the component instance map. Traverse the component instance map and for each component instance
-.. Get the base ID and component and add to mapping from base ID to component
+. *Populate used symbols *: Traverse component instance map and for each component
+.. For all command, event, telemetry channel, parameter, record, and container maps:
+... Get all used symbols for all entries in the map
+... Check to see if a valid analysis is returned, if not then raise an error
+... If the analysis is valid, return the analysis' used symbol set
+.. Flatten list of sets into a single set consisting of used symbols
+.. For each entry in the used symbol, create 3 subsets consisting of only array symbols, enumeration symbols, and struct symbols
+
 
 . *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse base ID to component map and for each entry
 .. *Build the resolved identifier to command map:*
