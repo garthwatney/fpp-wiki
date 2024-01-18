@@ -52,12 +52,6 @@ source instance, and a list of target instances.
 
 . The set of type symbols used in the topology
 
-. A set representing the subset of type symbols that correspond to arrays
-
-. A set representing the subset of type symbols that correspond to enumerations
-
-. A set representing the subset of type symbols that correspond to structs
-
 . A map from resolved identifiers to commands
 
 . A map from resolved identifiers to telemetry channels
