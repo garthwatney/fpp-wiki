@@ -10,8 +10,7 @@
 . *Populate used symbols*: Traverse component instance map and for each component
 .. For all command, event, telemetry channel, parameter, record, and container maps:
 ... Get all used symbols for all entries in the map
-... Check to see if a valid analysis is returned, if not then raise an error
-... If the analysis is valid, return the analysis' used symbol set
+... Return the analysis' used symbol set
 .. Flatten list of sets into a single set consisting of used symbols
 .. Return set of used symbols
 
