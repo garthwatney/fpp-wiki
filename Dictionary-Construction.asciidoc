@@ -12,7 +12,6 @@
 ... Get all used symbols for all entries in the map
 ... Return the analysis' used symbol set
 .. Flatten list of sets into a single set consisting of used symbols
-.. Return set of used symbols
 
 . *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse component instance map and for each dictionary element in the component (ie: command map, telemetry channel map, event map, parameter map, record map, collection map):
 .. *Build the resolved identifier to dictionary element map:*
