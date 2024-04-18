@@ -1,0 +1,13 @@
+This tool writes JSON dictionaries corresponding to F Prime topologies.
+
+*Options:*
+
+TODO
+
+*Output:*
+
+TODO
+
+*Procedure:*
+
+TODO
