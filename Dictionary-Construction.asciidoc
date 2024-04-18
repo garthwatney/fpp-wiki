@@ -1,3 +1,6 @@
+For implementation, see
+https://github.com/nasa/fpp/blob/main/compiler/lib/src/main/scala/analysis/Dictionary.scala[`Dictionary.scala`].
+
 == Input
 
 . An analysis data structure
