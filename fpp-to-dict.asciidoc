@@ -2,12 +2,51 @@ This tool writes JSON dictionaries corresponding to F Prime topologies.
 
 *Options:*
 
-TODO
+. . `-d` _dir_: Set the output directory to _dir_.
+If this option is not present, then the output directory is
+the current directory.
+
+.  `-i` _files_: Import _files_.
+The definitions in these files are part of the FPP model, but they do not cause 
+any code to be generated.
+
+. `-s` _string size_: Specify the default string size.  If this option is 
+present, the argument must be a decimal integer value between 1 and 1024.
+If this option is not present, the default string size is 80.
+
+. `-f` _framework version_: Specify the framework version.
+
+. `-p` _project version_: Specify the project version.
+
+. `-l` _library versions_: Specify the versions of libraries used in the project.
+
+*Input:*
+
+. A list _fl_tr_ of files to translate: either the single file _stdin_ or a list of 
+files specified on the command line.
+
+. A list _fl_i_ of files to import, specified as arguments to the `-i` option.
 
 *Output:*
 
-TODO
+. A set of `.json` files, written to the output directory.
 
 *Procedure:*
 
-TODO
+. Parse each of the files in _fl_tr_, generating a list _tul_tr_ of translation units.
+When parsing, recursively resolve include specifiers.
+
+. Do the same for _fl_i_, generating a list _tul_i_.
+
+. Perform https://github.com/nasa/fpp/wiki/Checking-Semantics[semantic checking] on 
+the concatenation of _tul_fl_ and _tul_i_.
+
+. Check that no two definitions in _tul_tr_ will generate a {cpp} file with the same name.
+If so, halt with an error message.
+
+. For each topology definition _T_ in _tul_tr_, do the following:
+
+.. https://github.com/nasa/fpp/wiki/Dictionary-Construction[Construct the 
+dictionary] _D_ for _T_.
+
+.. Generate the JSON output for _D_.

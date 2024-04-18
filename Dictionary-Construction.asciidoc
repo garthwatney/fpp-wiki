@@ -1,20 +1,42 @@
 == Input
+
 . An analysis data structure
+
 . A topology data structure to construct dictionary for
 
 == Output
+
 . Dictionary data structure consisting of dictionary contents
+
 . If dictionary construction fails, an error and no output
 
 == Procedure
+
 . *Populate used symbols*: Traverse component instance map and for each component
+
 .. For all command, event, telemetry channel, parameter, record, and container maps:
+
 ... Get all used symbols for all entries in the map
+
 ... Return the analysis' used symbol set
+
 .. Flatten list of sets into a single set consisting of used symbols
 
-. *Resolve identifiers and construct maps of resolved identifiers to commands, telemetry channels, events, parameters, records, and collections*: Traverse component instance map and for each dictionary element in the component (ie: command map, telemetry channel map, event map, parameter map, record map, collection map):
+. *Resolve identifiers and construct maps of resolved identifiers to commands, 
+telemetry channels, events, parameters, records, and collections*: Traverse 
+component instance map and for each dictionary element in the component (i.e., 
+command map, telemetry channel map, event map, parameter map, record map, 
+collection map):
+
 .. *Build the resolved identifier to dictionary element map:*
-... Fold over all keys (component instances) in the component instance map and do the below:
-.... For each dictionary element type (command, telemetry, event, parameter, record, collection), resolve identifiers by adding the element's identifier to the component instance base ID
-.... Add new entry to map from base ID to dictionary element (ie: command, telemetry, event, parameter, record, collection)
+
+... Fold over all keys (component instances) in the component instance map and 
+do the below:
+
+.... For each dictionary element type (command, telemetry, event, parameter, 
+record, collection), resolve identifiers by adding the element's identifier to 
+the component instance base ID
+
+.... Add new entry to map from base ID to dictionary element (i.e., command, 
+telemetry, event, parameter, record, collection)
+
