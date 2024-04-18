@@ -7,7 +7,7 @@ It also constructs the use-def map.
 . A list _tul_ of translation units.
 
 . An 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[analysis 
 data structure] _a_
 representing the results of analysis so far.
 
@@ -26,23 +26,23 @@ representing the results of analysis so far.
 .. *Module definitions:* Otherwise if _tum_ is a module definition _d_ with name _n_, then
 
 ... Look up the 
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[module 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[module 
 symbol] _sym_ associated with the unqualified name _n_ as described in
 *Expressions* below.
 
 ... Look up the mapping from _sym_ to _s_ in the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[symbol-scope 
 map] of _a_.
 If no such mapping exists, then throw an internal error.
 
 ... Push _s_ onto the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
 ... Visit each translation unit member of _d_.
 
 ... Pop _s_ off the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
 .. *Enum definitions:* Otherwise if _tum_ is an enum definition _d_ with name _n_, then
@@ -50,44 +50,44 @@ scope] of _a_.
 ... Visit the type of _d_ if it is present.
 
 ... Construct the unique 
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[enum
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[enum
 symbol] _sym_ corresponding to _d_.
 
 ... Look up the mapping from _sym_ to _s_ in the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[symbol-scope 
 map] of _a_.
 If no such mapping exists, then throw an internal error.
 
 ... Push _s_ onto the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
 ... Visit each enumerated constant definition of _d_.
 
 ... Pop _s_ off the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
 .. *Component definitions:* Otherwise if _tum_ is a component definition _d_ 
 with name _n_, then
 
 ... Construct the unique 
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[component
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[component
 symbol] _sym_ corresponding to _d_.
 
 ... Look up the mapping from _sym_ to _s_ in the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[symbol-scope 
 map] of _a_.
 If no such mapping exists, then throw an internal error.
 
 ... Push _s_ onto the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
 ... Visit each member of _d_.
 
 ... Pop _s_ off the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
 .. *Component instance definitions:*
@@ -123,12 +123,12 @@ in _cm_.
 .. *Unqualified names:* If _e_ is an unqualified name _n_, then
 
 ... Look up the mapping from _n_ to _sym_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the value name group.
 If no such mapping exists, then throw a semantic error.
 
 ... Record the mapping from _e_ to _sym_ in the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[use-def map]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[use-def map]
 of _a_.
 
 .. *Dot expressions:* Otherwise if _e_ is a dot expression _e'.n_, then
@@ -136,12 +136,12 @@ of _a_.
 ... Visit _e'_.
 
 ... Look up the mapping from _e'_ to _sym'_ in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[use-def map]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[use-def map]
 of _a_.
 If no such mapping exists, then throw an internal error.
 
 ... Look up the mapping from _sym'_ to _s_ in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[symbol-scope 
 map] of _a_.
 If no such mapping exists, then throw a semantic error.
 
@@ -149,7 +149,7 @@ If no such mapping exists, then throw a semantic error.
 If no such mapping exists, then throw a semantic error.
 
 ... Record the mapping from _e_ to _sym_ in the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[use-def map]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[use-def map]
 of _a_.
 
 .. *Other expressions:* Otherwise visit each expression and type appearing in 

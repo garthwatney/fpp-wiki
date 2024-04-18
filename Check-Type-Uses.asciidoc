@@ -10,7 +10,7 @@ As the algorithm computes types, it checks for typing errors.
 . A list _tul_ of translation units.
 
 . An 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[analysis 
 data structure] _a_
 representing the results of analysis so far.
 The use-def map must already be computed.
@@ -18,7 +18,7 @@ The use-def map must already be computed.
 == Output
 
 . The analysis _a_ with an updated
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[type map],
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[type map],
 if the check passes; otherwise an error.
 
 == Procedure
@@ -42,7 +42,7 @@ definition appearing in _tu_.
 For each definition _d_ that defines a type:
 
 . If _d_ is not in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[type map]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[type map]
 of _a_, then
 
 .. Visit each type name appearing in _d_, threading
@@ -77,7 +77,7 @@ of `U32` is `U32`), then use that as _T_.
 .. Otherwise
 
 ... Look in the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[use-def map]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[use-def map]
 of _n_ to get the symbol _s_ corresponding
 to _n_.
 Throw an internal error if it is not there.
@@ -85,7 +85,7 @@ Throw an internal error if it is not there.
 ... Visit the definition corresponding to _s_.
 
 ... Look in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[type map]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[type map]
 of _a_ to get the type _T_ of _s_.
 Throw an internal error if it is not there.
 
@@ -110,5 +110,5 @@ the common type does as well.
 . Array, struct, and enum types may have a default value of `None`.
 
 A 
-https://github.com/fprime-community/fpp/wiki/Finalize-Type-Definitions[later pass]
+https://github.com/nasa/fpp/wiki/Finalize-Type-Definitions[later pass]
 will fill in the missing values.

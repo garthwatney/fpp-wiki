@@ -5,7 +5,7 @@ This algorithm traverses the source model and checks topology definitions.
 . A list _tul_ of translation units.
 
 . An 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[analysis 
 data structure] _a_
 representing the results of analysis so far.
 

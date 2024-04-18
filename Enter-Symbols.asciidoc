@@ -5,7 +5,7 @@ This algorithm traverses a source model and enters symbols into their scopes.
 . A list _tul_ of translation units.
 
 . An 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[analysis 
 data structure] _a_
 representing the results of analysis so far.
 
@@ -26,13 +26,13 @@ then
 
 ... Look up the symbol _sym_ with unqualified name _n_
 in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the value name group.
 
 ... If _sym_ exists and is a module symbol, then let _s_  be the 
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[scope] 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[scope] 
 corresponding to _sym_ in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[symbol-scope 
 map] of _a_.
 
 ... Otherwise if _sym_ exists then report an error.
@@ -40,22 +40,22 @@ map] of _a_.
 ... Otherwise
 
 .... Let _s_ be a fresh 
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[scope].
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[scope].
 
 .... Construct a module symbol _sym_.
 
 .... Add the mapping from _n_ to _sym_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in every name group.
 
 .... Add the qualified name of _d_ to the qualified name map of _a_.
 
 ... Add _n_ to the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[scope
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[scope
 name list] of _a_.
 
 ... Push _s_ onto the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
 ... Visit each translation unit member of _d_, yielding a new analysis
@@ -64,53 +64,53 @@ data structure _a_.
 .... Let _s'_ be the innermost nested scope of _a_.
 
 .... Add the mapping from _sym_ to _s'_ in the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[symbol-scope 
 map] of _a_.
 
 ... Pop _s'_ off the nested scope of _a_.
 
 ... Remove _n_ from the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[scope
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[scope
 name list] of _a_.
 
 .. *Constant definitions:* If _tum_ is a constant
 definition _d_ with name _n_, then
 
 ... Construct the unique
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbol] 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[symbol] 
 _s_ of the correct kind for _d_.
 
 ... Add the mapping from _n_ to _s_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the value name group.
 
 ... Add the qualified name of _d_ to the
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[qualified name map]
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[qualified name map]
 of _a_.
 
 .. *Type definitions:* If _tum_ is an abstract type, 
 array, or struct definition _d_ with name _n_, then
 
 ... Construct the unique
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbol] 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[symbol] 
 _s_ of the correct kind for _d_.
 
 ... Add the mapping from _n_ to _s_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the type name group.
 
 ... Add the qualified name of _d_ to the
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[qualified name map]
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[qualified name map]
 of _a_.
 
 .. *Enum definitions:* If _tum_ is an enum definition, then
 
 ... Construct the unique
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[enum 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[enum 
 definition symbol] _sym_ for _d_.
 
 ... Add the mapping from _n_ to _sym_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the type and the value name groups.
 
 ... Add the qualified name of _d_ to the qualified name map of _a_.
@@ -118,7 +118,7 @@ scope] of _a_ in the type and the value name groups.
 ... Create a fresh scope _s_.
 
 ... Push _s_ onto the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
 ... Add _n_ to the scope name list of _a_.
@@ -131,7 +131,7 @@ yielding a new analysis data structure _a_.
 ... Let _s'_ be the innermost nested scope of _a_.
 
 ... Add the mapping from _sym_ to _s'_ in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[symbol-scope 
 map] of _a_.
 
 ... Pop _s'_ off the nested scope of _a_.
@@ -139,25 +139,25 @@ map] of _a_.
 .. *Port definitions:* If _tum_ is a port definition with name _n_, then
 
 ... Construct the unique
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbol] 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[symbol] 
 _s_ of the correct kind for _d_.
 
 ... Add the mapping from _n_ to _s_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the port name group.
 
 ... Add the qualified name of _d_ to the
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[qualified 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[qualified 
 name map] of _a_.
 
 .. *Component definitions:* If _tum_ is a component definition, then
 
 ... Construct the unique
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[component
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[component
 definition symbol] _sym_ for _d_.
 
 ... Add the mapping from _n_ to _sym_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the component, type, and value name groups.
 
 ... Add the qualified name of _d_ to the qualified name map of _a_.
@@ -165,7 +165,7 @@ scope] of _a_ in the component, type, and value name groups.
 ... Create a fresh scope _s_.
 
 ... Push _s_ onto the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_.
 
 ... Add _n_ to the scope name list of _a_.
@@ -178,7 +178,7 @@ yielding a new analysis data structure _a_.
 ... Let _s'_ be the innermost nested scope of _a_.
 
 ... Add the mapping from _sym_ to _s'_ in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[symbol-scope 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[symbol-scope 
 map] of _a_.
 
 ... Pop _s'_ off the nested scope of _a_.
@@ -187,41 +187,41 @@ map] of _a_.
 If _tum_ is a component instance definition with name _n_, then
 
 ... Construct the unique
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbol] 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[symbol] 
 _s_ of the correct kind for _d_.
 
 ... Add the mapping from _n_ to _s_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the component instance name group.
 
 ... Add the qualified name of _d_ to the
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[qualified 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[qualified 
 name map] of _a_.
 
 .. *Topology definitions:*
 If _tum_ is a topology definition with name _n_, then
 
 ... Construct the unique
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[symbol] 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[symbol] 
 _s_ of the correct kind for _d_.
 
 ... Add the mapping from _n_ to _s_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the topology name group.
 
 ... Add the qualified name of _d_ to the
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[qualified 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[qualified 
 name map] of _a_.
 
 . *Enumerated constant definitions:* Visit an enumerated constant definition 
 _d_ with name _n_ as follows:
 
 .. Construct the unique
-https://github.com/fprime-community/fpp/wiki/Analysis#data-structures[enumerated 
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[enumerated 
 constant definition symbol] _s_ for _d_.
 
 .. Add the mapping from _n_ to _s_ in the innermost 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[nested 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
 scope] of _a_ in the value name group.
 
 ... Add the qualified name of _d_ to the qualified name map of _a_.

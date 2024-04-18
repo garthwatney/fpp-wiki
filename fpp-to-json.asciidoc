@@ -16,11 +16,11 @@ files specified on the command line.
 Fpp-to-json generates the following files:
 
 . A file `fpp-ast.json` containing a JSON representation of the 
-https://github.com/fprime-community/fpp/wiki/Analysis[abstract syntax tree (AST)].
+https://github.com/nasa/fpp/wiki/Analysis[abstract syntax tree (AST)].
 . A file `fpp-loc.json` containing a JSON representation of the 
-https://github.com/fprime-community/fpp/wiki/Analysis[location map].
+https://github.com/nasa/fpp/wiki/Analysis[location map].
 . If the flag `-s` is not present, then a file `fpp-analysis.json` containing a JSON representation of the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[Analysis Data Structure].
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[Analysis Data Structure].
 
 *Procedure*:
 
@@ -28,17 +28,17 @@ https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[Analysis Da
 When parsing, recursively resolve include specifiers.
 
 . Convert the 
-https://github.com/fprime-community/fpp/wiki/Analysis[abstract syntax tree (AST)] and the
-https://github.com/fprime-community/fpp/wiki/Analysis[location map]
+https://github.com/nasa/fpp/wiki/Analysis[abstract syntax tree (AST)] and the
+https://github.com/nasa/fpp/wiki/Analysis[location map]
 to JSON objects.
 
 . If `-s` is not present, then
 
-.. Perform https://github.com/fprime-community/fpp/wiki/Checking-Semantics[semantic checking] on 
+.. Perform https://github.com/nasa/fpp/wiki/Checking-Semantics[semantic checking] on 
 _tul_.
 
 .. Convert the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[Analysis Data Structure]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[Analysis Data Structure]
 to a JSON object.
 
 . Write the JSON objects to files.

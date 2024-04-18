@@ -2,9 +2,9 @@ This algorithm computes dependencies for a list of translation units.
 
 == Input
 
-. An https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis data structure]
+. An https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[analysis data structure]
 _a_. The 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[input file set]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[input file set]
 of _a_ must record the set of files presented for analysis.
 
 . A list _tul_ of FPP translation units.
@@ -12,23 +12,23 @@ of _a_ must record the set of files presented for analysis.
 ==  Output
 
 . An analysis data structure _a_ with updated
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[location specifier map],
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[dependency file set],
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[direct dependency file set],
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[location specifier map],
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[dependency file set],
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[direct dependency file set],
 and
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[included file set].
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[included file set].
 
 == Procedure
 
 . *Resolve include specifiers:* Recursively resolve include specifiers in _tu_.
 Add the path of each included file to the included file set in _a_.
 If the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[level]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[level]
 is zero, then add the path of each included file to the direct dependency
 file set in _a_.
 
 . *Build the location specifier map:* Traverse each translation unit _tu_ in _tul_, updating the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[scope name list]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[scope name list]
 as modules are entered and exited.
 For each location specifier _s_ encountered, do the following:
 
@@ -40,7 +40,7 @@ For example, if the location specifier `locate constant c at "c.fpp"` appears
 inside module _M_, then _q_ is _M.c_.
 
 .. Check the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[location 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[location 
 specifier map]
 for a mapping from _(k, q)_ to some location specifier _s'_.
 
@@ -57,7 +57,7 @@ in the file `/home/foo/bar/baz.fpp`, then _p_ is `/home/foo/bar/c.fpp`.
 ... If _p_ does not equal _p'_, then throw an error.
 
 . *Map uses to locations:* Traverse each translation unit _tu_ in _tul_, updating the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[scope name list]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[scope name list]
 as modules are entered and exited.
 For each use of a symbol _u_ encountered, do the following:
 
@@ -69,22 +69,22 @@ appears before `A.c.d`.
 
 .. For each qualified name _q_ in _l_, in order starting with the head of 
 _l_, check the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[location 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[location 
 specifier map]
 of _a_ for a path _p_ corresponding to _q_.
 
 .. If _p_ exists and is not in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[input file set]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[input file set]
 of _a_ and is not already in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[dependency file set]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[dependency file set]
 of _a_, then
 
 ... If the level is zero, then add _p_ to the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[direct dependency file set]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[direct dependency file set]
 of _a_.
 
 ... Add _p_ to the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[dependency file set]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[dependency file set]
 of _a_.
 
 ... If the file _f_ at _p_ exists, then
@@ -98,7 +98,7 @@ Restore the current level and scope name list and
 let the result be the new _a_.
 
 ... Otherwise add _p_ to the
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[missing 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[missing 
 dependency file set] of _a_.
 
 . *Eliminate included files as dependencies:* For each file _f_ in the included

@@ -6,7 +6,7 @@ there are no cycles in the use-def graph.
 . A list _tul_ of translation units.
 
 . An 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[analysis 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[analysis 
 data structure] _a_
 representing the results of analysis so far.
 The use-def map must already be computed.
@@ -37,17 +37,17 @@ definition appearing in _tu_.
 .. Let _s_ be the unique symbol representing _d_.
 
 .. Check whether _s_ appears in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[use-def symbol set]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[use-def symbol set]
 of _a_.
 If it does, then the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[use-def matching list]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[use-def matching list]
 of _a_ represents a cycle.
 Throw a semantic error.
 Use the use-def matching list to construct the cycle
 for the error message.
 
 .. Otherwise if _s_ is not in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[visited symbol set]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[visited symbol set]
 of _a_, then
 
 ... Let _a'_ be the analysis data structure that results from
@@ -65,14 +65,14 @@ adding _s_ to the visited symbol set of _a_.
 . *Uses:* For each AST node _n_ that represents a use:
 
 .. Look in the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[use-def map]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[use-def map]
 of _n_ to get the symbol _s_ corresponding
 to _n_. Throw an internal error if it is not there.
 
 .. Use _n_ and _s_ to construct a use-def matching _m_.
 
 .. Let _a'_ be the analysis data structure that results from adding _m_ to the 
-https://github.com/fprime-community/fpp/wiki/Analysis-Data-Structure[use-def matching list]
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[use-def matching list]
 of _a_.
 
 .. Visit the definition corresponding to _s_ with input _a'_.

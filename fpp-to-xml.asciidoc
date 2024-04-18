@@ -43,7 +43,7 @@ When parsing, recursively resolve include specifiers.
 
 . Do the same for _fl_i_, generating a list _tul_i_.
 
-. Perform https://github.com/fprime-community/fpp/wiki/Checking-Semantics[semantic checking] on 
+. Perform https://github.com/nasa/fpp/wiki/Checking-Semantics[semantic checking] on 
 the concatenation of _tul_fl_ and _tul_i_.
 
 . Check that no two definitions in _tul_tr_ will generate an XML file with the same name.
