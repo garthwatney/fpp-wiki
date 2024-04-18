@@ -1,4 +1,5 @@
-For implementation, see the https://github.com/nasa/fpp/tree/main/compiler/lib/src/main/scala/analysis/CheckSemantics[CheckSemantics] directory.
+For implementation, see 
+https://github.com/nasa/fpp/blob/main/compiler/lib/src/main/scala/analysis/CheckSemantics/CheckSemantics.scala[`CheckSemantics.scala`].
 
 == Input
 
