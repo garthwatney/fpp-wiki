@@ -37,6 +37,6 @@ names of any FPP files and
 (2) the names of any directories that transitively contain FPP files.
 Similarly for `'`, `"`, `,`, `/`, `:`, etc.
 
-* You must use care when using symbolic links in file paths presented to the
-FPP tools.
+* You must use care when the paths of files presented to the FPP tools contain
+symbolic links.
 See _FPP User's Guide_, § 12.4.5 (TODO).
