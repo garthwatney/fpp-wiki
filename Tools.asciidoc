@@ -39,4 +39,4 @@ Similarly for `'`, `"`, `,`, `/`, `:`, etc.
 
 * You must use care when the paths of files presented to the FPP tools contain
 symbolic links.
-See _FPP User's Guide_, § 12.4.5 (TODO).
+See _FPP User's Guide_, § 12.8 (TODO).
