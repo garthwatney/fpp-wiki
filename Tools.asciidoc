@@ -40,4 +40,4 @@ Similarly for `'`, `"`, `,`, `/`, `:`, etc.
 * Due to an idiosyncrasy in the way the Java Virtual Machine (JVM) resolves
 symbolic links, you should avoid using relative paths when running FPP tools
 inside any directory that may be a symbolic link to a different directory.
-See _FPP User's Guide_, § 12.5.4 (TODO).
+See _FPP User's Guide_, § 12.4.5 (TODO).
