@@ -37,7 +37,6 @@ names of any FPP files and
 (2) the names of any directories that transitively contain FPP files.
 Similarly for `'`, `"`, `,`, `/`, `:`, etc.
 
-* Due to an idiosyncrasy in the way the Java Virtual Machine (JVM) resolves
-symbolic links, you should avoid using relative paths when running FPP tools
-inside any directory that may be a symbolic link to a different directory.
+* You must use care when running FPP tools inside any directory that may be a symbolic
+link to a different directory.
 See _FPP User's Guide_, § 12.4.5 (TODO).
