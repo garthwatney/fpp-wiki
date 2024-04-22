@@ -31,9 +31,13 @@ Empty lists are not allowed. For example, there must be at least one file in the
 
 * You can run any tool with the `-h` option to get a help summary.
 
-* As of v1.0.0, FPP assumes that there are no shell or OS delimiter characters 
-in the path names of FPP files.
+* There must be no shell or OS delimiter characters in the path names of FPP files.
 In particular, you should replace spaces with dashes or underscores in (1) the 
 names of any FPP files and
 (2) the names of any directories that transitively contain FPP files.
 Similarly for `'`, `"`, `,`, `/`, `:`, etc.
+
+* Due to an idiosyncrasy in the way the Java Virtual Machine (JVM) resolves
+symbolic links, you should avoid using relative paths when running FPP tools
+inside any directory that may be a symbolic link to a different directory.
+See _FPP User's Guide_, § 12.5.4 (TODO).
