@@ -198,6 +198,21 @@ scope] of _a_ in the component instance name group.
 https://github.com/nasa/fpp/wiki/Analysis#data-structures[qualified 
 name map] of _a_.
 
+.. *State machine definitions:* If _tum_ is a state machine definition with name _n_, then
+
+... Construct the unique
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[symbol] 
+_s_ of the correct kind for _d_.
+
+... Add the mapping from _n_ to _s_ in the innermost 
+https://github.com/nasa/fpp/wiki/Analysis-Data-Structure[nested 
+scope] of _a_ in the state machine name group.
+
+... Add the qualified name of _d_ to the
+https://github.com/nasa/fpp/wiki/Analysis#data-structures[qualified 
+name map] of _a_.
+
+
 .. *Topology definitions:*
 If _tum_ is a topology definition with name _n_, then
 
